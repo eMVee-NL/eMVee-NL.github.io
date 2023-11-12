@@ -1,18 +1,18 @@
 ---
 title: Write-up Alfa on Vulnhub
 author: eMVee
-date: 2023-04-11 20:00:00 +0800
+date: 2023-04-10 20:00:00 +0800
 categories: [Vulnhub, CTF]
 tags: [Vulnhub, OSCP]
 render_with_liquid: false
 ---
 
-While preparing for the #OSCP exam, you have to gain more experience in hacking and building your methodology to pass the exam. There is a well known list created by TJnull with all kind of vulnerable machines. The machine can be downloaded from [Vulnhub](https://www.vulnhub.com/entry/alfa-1,655/), if it was not removed. Lucky for us there is a wayback machine link available to download the file from [here](https://web.archive.org/web/20230223015504/https://download.vulnhub.com/alfa/Alfa.ova)
-After downloading the virtual machine, you have to configure the machine so it is on the same network as your Kali machine.
+
+Another vulnerable machine from the famous TJnull list should be hacked while preparing for the OSCP exam. The machine Could be downloaded from [Vulnhub](https://www.vulnhub.com/entry/alfa-1,655/), if it was not removed. Lucky for us there is a wayback machine link available to download the file from [here](https://web.archive.org/web/20230223015504/https://download.vulnhub.com/alfa/Alfa.ova). After downloading the virtual machine, you have to configure the machine so it is on the same network as your Kali machine.
 
 
 ## Getting started
-As soon as everything has been configured in the virtual environment, it is time to start.
+After configuring the virtual machins it is time to start.
 First we have to create a working directory and check my IP address.
 ```bash
 ┌──(emvee㉿kali)-[~]
@@ -289,7 +289,8 @@ Within the FTP server a directory called `thomas` can be accessed. In that direc
 └─$ xdg-open milo.jpg  
 ```
 
-![[Pasted image 20230410231115.png]]
+![Image](/assets/img/WriteUp/Vulnhub/Alfa/Pasted image 20230410231115.png){: width="700" height="400" }
+
 It looks like it is a dog. This dog could have the name `milo`. So let's keep this in mind and add it to our notes.
 
 Now let's enumerate the webservice. First we will start with whatweb to discover the techniques used on the website.
@@ -329,13 +330,15 @@ Well, the results are allready discovered with nmap. So we have nothing to add t
 
 ```
 Nikto did not find any interesting information what we could use for our attack . Let's navigate with the browser to the website.
-![[Pasted image 20230410231556.png]]
+
+![Image](/assets/img/WriteUp/Vulnhub/Alfa/Pasted image 20230410231556.png){: width="700" height="400" }
+
 There are no active hyperlinks on the website, even the source code is not usefull for us as attacker. Perhaps there could be find something interesting while enumerating files and directories with dirsearch.
 ```bash
 ┌──(emvee㉿kali)-[~/Documents/Vulnhub/Alfa]
 └─$ dirsearch -u http://$ip -e php,txt,html -w /usr/share/wordlists/dirb/big.txt
 
-  _|. _ _  _  _  _ _|_    v0.4.2                                                                                                                                                                                                           
+  _|. _ _  _  _  _ _|_    v0.4.2                            
  (_||| _) (/_(_|| (_| )
  
 Extensions: php, txt, html | HTTP method: GET | Threads: 30 | Wordlist size: 20469
@@ -375,14 +378,17 @@ Dirsearched discovered a robots.txt file. Let's check the content of this file.
 
 ```
 In the bottom of the `robots.txt` file something is shown. I've no idea what this could be. So let's use our Google Fu to identify what this might be.
-```GOOGLE-FU
+```
 ++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>+++++++++++++++++.>>---.+++++++++++.------.-----.<<--.>>++++++++++++++++++.++.-----..-.+++.++.
 ```
 This looks like it is BRAINFUCK according Google. Well there is a second hit with BRAINFUCK to which could be used to encode and decode. Let's visit the website.
-![[Pasted image 20230410232145.png]]
+
+![Image](/assets/img/WriteUp/Vulnhub/Alfa/Pasted image 20230410232145.png){: width="700" height="400" }
 
 Now that looks interesting... A directory what we were not allowed to find.
-![[Pasted image 20230410232456.png]]
+
+![Image](/assets/img/WriteUp/Vulnhub/Alfa/Pasted image 20230410232456.png){: width="700" height="400" }
+
 By opening the website (directory) we get some juicy information about how we could generate a password list. The password should exist with the name of the dog, followed by three digits. We can use `crunch` to generate a passwordlist which we can use as input to run a dictionary attack with Hydra.
 
 ```bash
@@ -593,7 +599,7 @@ udp        0      0 0.0.0.0:138             0.0.0.0:*                           
 thomas@Alfa:~$ 
 ```
 
-There is an internal service running on port 5901... and it is only running for 127.0.0.1. To make this servicve available outside the target we should setup local port forwarding.
+There is an internal service running on port 5901... and it is only running for 127.0.0.1. To make this service available outside the target we should setup local port forwarding.
 ```bash
 ┌──(emvee㉿kali)-[~/Documents/Vulnhub/Alfa]
 └─$ ssh -f -N -L 5901:localhost:5901 thomas@$ip -p 65111
@@ -710,4 +716,5 @@ Same machine: preferring raw encoding
 
 ```
 It looks like we have root access, now capture the root flag!
-![[Pasted image 20230411090409.png]]
+
+![Image](/assets/img/WriteUp/Vulnhub/Alfa/Pasted image 20230411090409.png){: width="700" height="400" }
