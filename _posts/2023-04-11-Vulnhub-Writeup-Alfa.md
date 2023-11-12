@@ -1,7 +1,7 @@
 ---
 title: Write-up Alfa on Vulnhub
 author: eMVee
-date: 2033-04-11 20:00:00 +0800
+date: 2023-04-11 20:00:00 +0800
 categories: [Vulnhub, CTF]
 tags: [Vulnhub, OSCP]
 render_with_liquid: false
