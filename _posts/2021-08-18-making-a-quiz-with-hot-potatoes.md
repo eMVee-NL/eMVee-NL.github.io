@@ -8,7 +8,7 @@ render_with_liquid: false
 ---
 
 A while back I started getting certifications such as CISSP, CEH, ECSA and CSSLP. Many questions are multiple choice and can often be found in books at the end of a chapter. 
-I like to read a paper version of the book, but I often find it a bit less to make those questions within a book. Somewhere deep in my memory, I remembered that we used to have an application to make practice tests.
+I like to read a paper version of the book, but I often find it a bit frustrating to make those questions within a book. Somewhere deep in my memory, I remembered that we used to have an application to make practice tests.
 
 ## Hot Potatoes
 ![Image](/assets/img/Education/hot-potatoes.png){: .right}Years ago, when I was allowed to sit in class every day and prepare for tests, a teacher introduced us to a great application to make practice tests. It's called Hot Potatoes. I used to use it quite often to prepare for those tests with my fellow students. This way we could come up with multiple choice questions with answers and we shared these practice tests with each other.
