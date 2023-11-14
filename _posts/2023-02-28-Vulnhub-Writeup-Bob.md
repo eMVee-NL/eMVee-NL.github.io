@@ -2,7 +2,7 @@
 title: Write-up Bob on Vulnhub
 author: eMVee
 date: 2023-02-28 20:00:00 +0800
-categories: [Vulnhub, CTF]
+categories: [CTF, Vulnhub]
 tags: [Vulnhub, OSCP]
 render_with_liquid: false
 ---

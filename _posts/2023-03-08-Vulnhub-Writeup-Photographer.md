@@ -2,7 +2,7 @@
 title: Write-up Photographer on Vulnhub
 author: eMVee
 date: 2023-03-08 20:00:00 +0800
-categories: [Vulnhub, CTF]
+categories: [CTF, Vulnhub]
 tags: [Vulnhub, OSCP, suid]
 render_with_liquid: false
 ---

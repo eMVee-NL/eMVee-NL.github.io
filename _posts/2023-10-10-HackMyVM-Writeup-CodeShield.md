@@ -2,7 +2,7 @@
 title: Write-up CodeShield on HackMyVM
 author: eMVee
 date: 2023-09-20 20:00:00 +0800
-categories: [HackMyVM, CTF]
+categories: [CTF, HackMyVM]
 tags: [HackMyVM, OSCP]
 render_with_liquid: false
 ---
@@ -16,7 +16,7 @@ Let's import the vulnerable machine into our lab environment. The vulnerable mac
 ## Enumeration
 Before starting any hacking activity we should start always with enumerating and documenting all discovered information before exploiting a target.
 #### Network enumeration
-First let's run a ping sweep wit fping withing our virtual network.
+First let's run a ping sweep wit fping within our virtual network.
 ```bash
 ┌──(emvee㉿kali)-[~]
 └─$ fping -ag 10.0.2.0/24 2> /dev/null

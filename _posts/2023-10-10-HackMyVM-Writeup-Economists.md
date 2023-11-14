@@ -2,7 +2,7 @@
 title: Write-up Economists on HackMyVM
 author: eMVee
 date: 2023-10-10 20:00:00 +0800
-categories: [HackMyVM, CTF]
+categories: [CTF, HackMyVM]
 tags: [HackMyVM, OSCP]
 render_with_liquid: false
 ---

@@ -2,7 +2,7 @@
 title: Write-up Cheeseyjack on Vulnhub
 author: eMVee
 date: 2023-05-03 20:00:00 +0800
-categories: [Vulnhub, CTF]
+categories: [CTF, Vulnhub]
 tags: [Vulnhub, OSCP]
 render_with_liquid: false
 ---
