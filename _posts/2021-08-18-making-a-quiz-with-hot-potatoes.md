@@ -2,7 +2,7 @@
 title: Making a quiz with Hot Potatoes
 author: eMVee
 date: 2021-08-18 20:00:00 +0800
-categories: [Education, Tools]
+categories: [Tools, Education]
 tags: [Tools, Hot potatoes]
 render_with_liquid: false
 ---

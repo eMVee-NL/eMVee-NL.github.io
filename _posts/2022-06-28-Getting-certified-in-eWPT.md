@@ -10,7 +10,7 @@ render_with_liquid: false
  After completing the eJPT course, it was time to follow the next course. I was not sure which course I would like to start with. I had to courses in mind, the eCPPT and the eWPT course.
 
 ## Getting certified as eLearnSecurity Web Penetration Tester (eWPT)
-![Image](/assets/img/Education/eWPT.png){: .right : w="200"}} When I looked at the duration of the course I decided to follow the shortes course in duration, which is the [Web Application Penetration Testing ](https://my.ine.com/CyberSecurity/courses/38316560/web-application-penetration-testing) course from INE. According INE it will take around 20 hours to finish this course. The training is divided in some sections with different modules and is explained by Dimitrios Bougioukas. The Web Application Penetration Tester (WAPT) training prepares you for the exam to get the eWPT certificate. The course consists of 15 modules and a separate module in preparation for the eWPT exam.
+![Image](/assets/img/Education/eWPT.png){: .right : w="200"} When I looked at the duration of the course I decided to follow the shortes course in duration, which is the [Web Application Penetration Testing ](https://my.ine.com/CyberSecurity/courses/38316560/web-application-penetration-testing) course from INE. According INE it will take around 20 hours to finish this course. The training is divided in some sections with different modules and is explained by Dimitrios Bougioukas. The Web Application Penetration Tester (WAPT) training prepares you for the exam to get the eWPT certificate. The course consists of 15 modules and a separate module in preparation for the eWPT exam.
 The following modules are covered during the training:
 
 eWPT training exist out of 15 modules:
