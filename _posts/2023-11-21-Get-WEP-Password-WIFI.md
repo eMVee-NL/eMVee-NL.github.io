@@ -23,7 +23,7 @@ Now we should search for WiFi networks with WEP encryption.
 sudo airodump-ng --encrypt WEP wlan0mon
 ```
 
-![Image](/assets/img/WriteUp/WiFiChallengeLab/Pasted image 20231016211743.png){: width="700" height="400" }
+![Image](/assets/img/WriteUp/WiFiChallengeLAB/Pasted image 20231016211743.png){: width="700" height="400" }
 
 There is a client active on this WEP network. This makes it easier to capture enough data to crack the password.
 
@@ -49,7 +49,7 @@ Crack the password with the data captured in a command earlier.
 sudo aircrack-ng wifi-old-01.cap
 ```
 
-![Image](/assets/img/WriteUp/WiFiChallengeLab/Pasted image 20231016213002.png){: width="700" height="400" }
+![Image](/assets/img/WriteUp/WiFiChallengeLAB/Pasted image 20231016213002.png){: width="700" height="400" }
 
 ## Connect to the WEP network
 The password (key) is found, so write this down in your notes. We need this key to connect to the WEP WiFi network.

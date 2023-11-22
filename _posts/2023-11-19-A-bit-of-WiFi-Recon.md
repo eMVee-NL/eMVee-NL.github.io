@@ -77,7 +77,7 @@ Once the network interface is in monitor mode we can start airodump-ng to collec
 ```bash
 sudo airodump-ng wlan0mon --band abg
 ```
-![Image](/assets/img/WriteUp/WiFiChallengeLab/Pasted image 20231016122614.png){: width="700" height="400" }
+![Image](/assets/img/WriteUp/WiFiChallengeLAB/Pasted image 20231016122614.png){: width="700" height="400" }
 
 ### Identify the MAC address of a client
 A MAC address of a client can be useful if, for example, we need to perform a deauthenticate attack to capture a WPA handshake. During the reconnaissance we must therefore make notes of the MAC addresses that connect to our target (Access Point). WiFiChallensLAB has this as part of the challenges to identify a MAC address.
@@ -98,7 +98,7 @@ Because there are multiple WiFi networks, we can also specifically monitor a cer
 ```bash
 user@WiFiChallengeLab:~$ sudo airodump-ng wlan0mon --band abg -c11
 ```
-![Image](/assets/img/WriteUp/WiFiChallengeLab/Pasted image 20231016132152.png){: width="700" height="400" }
+![Image](/assets/img/WriteUp/WiFiChallengeLAB/Pasted image 20231016132152.png){: width="700" height="400" }
 
 A client's MAC address is displayed at the bottom of the screen. The MAC addresses found that communicate with our target (Access Point) must be added to our notes.
 
@@ -121,7 +121,7 @@ We can monitor on a specific channel as well. In this example we only monitor ch
 ```bash
 user@WiFiChallengeLab:~$ sudo airodump-ng wlan0mon --band abg -c11
 ```
-![Image](/assets/img/WriteUp/WiFiChallengeLab/Pasted image 20231016135801.png){: width="700" height="400" }
+![Image](/assets/img/WriteUp/WiFiChallengeLAB/Pasted image 20231016135801.png){: width="700" height="400" }
 
 The probes are shown at the bottom next to the workstations.
 
@@ -144,12 +144,12 @@ Now we need to collect information about the hidden WiFi network. We have to kno
 ```bash
 user@WiFiChallengeLab:~$ sudo airodump-ng wlan0mon --band abg
 ```
-![Image](/assets/img/WriteUp/WiFiChallengeLab/Pasted image 20231016140130.png){: width="700" height="400" }
+![Image](/assets/img/WriteUp/WiFiChallengeLAB/Pasted image 20231016140130.png){: width="700" height="400" }
 
 When we have the information required we should try to crack the hidden network name.
 ```bash
 root@WiFiChallengeLab:~# mdk4 wlan0mon p -t F0:9F:C2:6A:88:26 -f wifi-rockyou.txt
 ```
-![Image](/assets/img/WriteUp/WiFiChallengeLab/Pasted image 20231016145316.png){: width="700" height="400" }
+![Image](/assets/img/WriteUp/WiFiChallengeLAB/Pasted image 20231016145316.png){: width="700" height="400" }
 
 Once we have the SSID name we can add it to our notes and use it to attack the network.
