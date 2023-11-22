@@ -1,8 +1,8 @@
 ---
-title: Write-up Blue on PNPT
+title: Write-up Blue on TCM
 author: eMVee
 date: 2022-08-23 21:00:00 +0800
-categories: [CTF, PNPT]
+categories: [CTF, TCM]
 tags: [PNPT, ms17-010, Eternal Blue]
 render_with_liquid: false
 ---

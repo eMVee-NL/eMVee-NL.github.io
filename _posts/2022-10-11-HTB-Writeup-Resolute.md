@@ -3,7 +3,7 @@ title: Write-up Resolute on HTB
 author: eMVee
 date: 2022-10-11 21:00:00 +0800
 categories: [CTF, HTB]
-tags: [HTB, OSCP, Actice Directory, AD, DNSadmins]
+tags: [HTB, OSCP, Active Directory, AD, DNSadmins]
 render_with_liquid: false
 ---
 

@@ -1,8 +1,8 @@
 ---
-title: Write-up Academy on PNPT
+title: Write-up Academy on TCM
 author: eMVee
 date: 2022-08-18 21:00:00 +0800
-categories: [CTF, PNPT]
+categories: [CTF, TCM]
 tags: [PNPT, Unrestricted File Upload]
 render_with_liquid: false
 ---

@@ -1,8 +1,8 @@
 ---
-title: Write-up Black Pearl on PNPT
+title: Write-up Black Pearl on TCM
 author: eMVee
 date: 2022-08-19 21:00:00 +0800
-categories: [CTF, PNPT]
+categories: [CTF, TCM]
 tags: [PNPT, vhost]
 render_with_liquid: false
 ---

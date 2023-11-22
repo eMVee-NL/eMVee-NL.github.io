@@ -1,8 +1,8 @@
 ---
-title: Write-up Butler on PNPT
+title: Write-up Butler on TCM
 author: eMVee
 date: 2022-08-20 21:00:00 +0800
-categories: [CTF, PNPT]
+categories: [CTF, TCM]
 tags: [PNPT, Unqouted service path]
 render_with_liquid: false
 ---
