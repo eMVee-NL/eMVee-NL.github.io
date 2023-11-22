@@ -1,7 +1,7 @@
 ---
 title: Write-up CAP on HTB
 author: eMVee
-date: 2022-02-11 21:00:00 +0800
+date: 2021-10-01 21:00:00 +0800
 categories: [CTF, HTB]
 tags: [HTB, OSCP, capabilities]
 render_with_liquid: false
