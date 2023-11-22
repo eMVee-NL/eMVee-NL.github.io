@@ -3,7 +3,7 @@ title: Getting certified in CRISC
 author: eMVee
 date: 2023-10-14 20:00:00 +0800
 categories: [Certification, CRISC]
-tags: [CRISC, ISACA]
+tags: [CRISC, ISACA, Risk]
 render_with_liquid: false
 ---
 
