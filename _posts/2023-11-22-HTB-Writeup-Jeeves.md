@@ -1,5 +1,5 @@
 ---
-title: Write-up Resolute on HTB
+title: Write-up Jeeves on HTB
 author: eMVee
 date: 2023-11-22 22:00:00 +0800
 categories: [CTF, HTB]
