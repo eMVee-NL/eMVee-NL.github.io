@@ -3,7 +3,7 @@ title: Write-up Horizontall on HTB
 author: eMVee
 date: 2021-10-15 21:00:00 +0800
 categories: [CTF, HTB]
-tags: [HTB, OSCP, API, TUnnel, Laravel, CVE-2021-3129]
+tags: [HTB, OSCP, API, Tunnel, Laravel, CVE-2021-3129]
 render_with_liquid: false
 ---
 
