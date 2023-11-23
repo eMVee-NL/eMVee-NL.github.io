@@ -223,7 +223,7 @@ Gobuster did discover `askjeeves`, let's find out if this does works better then
 We can see a Jenkins version, let's add it to our notes.
 - Jenkins ver. 2.87
 
-I can remember a machine called [Butler](https://emvee-nl.github.io/posts/PNPT-Writeup-Butler/) from TCM with Jenkins. This machine could run scripts from a Script Console. Let's find out if we can access it here as well.
+I can remember a machine called [Butler](https://emvee-nl.github.io/posts/TCM-Writeup-Butler/) from TCM with Jenkins. This machine could run scripts from a Script Console. Let's find out if we can access it here as well.
 
 ![Image](/assets/img/WriteUp//HTB/Jeeves/Pasted image 20231122211540.png){: width="700" height="400" }
 
