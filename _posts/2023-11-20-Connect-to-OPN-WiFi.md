@@ -127,7 +127,7 @@ ip link set wlan2 up
 ```
 Now we shoold try to connect again to the WiFi network.
 ```bash
-wpa_supplicant -Dnl80211 -iwlan2 -c open.conf
+wpa_supplicant -D nl80211 -i wlan2 -c wifi-guest.conf
 ```
 And of course we also have to request an IP address from the DHCP server.
 ```bash
