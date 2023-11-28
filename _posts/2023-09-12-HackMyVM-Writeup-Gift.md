@@ -207,8 +207,8 @@ We are really root, so we can now capture all the flags.
 gift:~# ls
 root.txt  user.txt
 gift:~# cat user.txt 
-HMV665sXzDS
+<-- Here is the USER flag -->
 gift:~# cat root.txt 
-HMVtyr543FG
+<-- Here is the ROOT flag -->
 
 ```
