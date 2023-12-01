@@ -321,7 +321,7 @@ type user.txt
 C:\Users\kohsuke\Desktop>
 
 ```
-Now we should copy netcate to our working direcotry where we have some exploits from the potato family as well.
+Now we should copy netcat to our working directory where we have some exploits from the potato family as well.
 ```bash
 ┌──(emvee㉿kali)-[~/Documents/HTB/Jeeves]
 └─$ cp /usr/share/windows-resources/binaries/nc.exe .
