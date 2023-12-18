@@ -3,7 +3,7 @@ title: SysReptor another awesome reporting tool
 author: eMVee
 date: 2023-12-01 08:00:00 +0800
 categories: [Tools, Reporting]
-tags: [Tools, SysReptor, OSCP, OSWP, OSWA, OSEP, OSWE, OSDA, Reporting]
+tags: [Tools, SysReptor, OSCP, OSWP, OSWA, OSEP, OSWE, OSDA, Reporting, CPTS, CBHH, CDSA]
 render_with_liquid: false
 ---
 
@@ -50,7 +50,10 @@ curl -s https://docs.sysreptor.com/install.sh | sudo bash
 ```
 Nice and easy, but I can also imagine that you would rather do everything yourself. Then follow this [manual](https://docs.sysreptor.com/setup/installation/#manual-installation). Please note, at the end of the (automatic) installation, a username and password will be shown. Store those credentials some where safe.
 
-### Import all kind of Offsec templates
+### Import all kind of templates
+There are some templates for Offsec and Hack The Box avalable what can be downloaded from sysreptor it self. The Offsec templates are **not** official, but they are looking awesome. Importing those templates are just a few commands that will make your life easier in the end.
+
+#### Install the Offsec templates
 There are several Offsec templates for within SysReptor. With the exception of a few minor points, these templates are almost identical to those of Offsec. That's why I also explain how you can install these templates so that you can use them when creating your report.
 
 First you have to change the working directory to the location where Sysreptor have been installed.
@@ -64,6 +67,21 @@ url="https://docs.sysreptor.com/assets/offsec-designs.tar.gz"
 Now we retrieve the archive with templates and immediately install it in SysReptor.
 ```bash
 curl -s "$url" | sudo docker compose exec --no-TTY app python3 manage.py importdemodata --type=design
+```
+
+#### Install the Hack The Box Report templates
+Hack The Box Reports has three kind of templates. And I think they are looking pretty well.
+Just like when we had to import the Offsec templates we have to change the working directory so we can install the HTB Report templates.
+```bash
+cd sysreptor/deploy
+```
+Now we should declare the URL variable to the location of the templates.
+```bash
+url="https://docs.sysreptor.com/assets/htb-designs.tar.gz"
+```
+And lastly we should import the templates so the HTB Report tempaltes are available in Sysreptor.
+```bash
+curl -s "$url" | docker compose exec --no-TTY app python3 manage.py importdemodata --type=design
 ```
 
 ## Logon to SysReptor

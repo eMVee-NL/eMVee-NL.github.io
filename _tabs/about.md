@@ -14,3 +14,4 @@ To share my knowledge and to learn I like to design and build sometimes vulnerab
 | CodeShield | [hackmyvm.eu](https://downloads.hackmyvm.eu/codeshield.zip) |
 | Elite Economists (aka Economists) | [hackmyvm.eu](https://downloads.hackmyvm.eu/economists.zip) |
 | XMAS | Coming soon on [hackmyvm.eu](https://hackmyvm.eu) |
+| Quick | Coming soon on [hackmyvm.eu](https://hackmyvm.eu) |
