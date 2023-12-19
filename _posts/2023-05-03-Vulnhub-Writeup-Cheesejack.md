@@ -7,7 +7,7 @@ tags: [Vulnhub, OSCP]
 render_with_liquid: false
 ---
 
-While working on OSCP, I came a cross a webapplication qdPM9.1 in one of the walkthrough exercises where I had to create a wordlist with cewl and launch a dictionary attack against the webapplication. My attack was succesful with Burp Suite Intruder, but this was not succesful with Hydra. It frustrated me and I started to write my own script in Python. Then I started searching of there was another machine with this webapplication so I could test all of them and write a walkthrough. The machine called Cheeseyjack is hosted on [Vulnhub](https://www.vulnhub.com/entry/cheesey-cheeseyjack,578/) and can be downloaded there.
+While working on OSCP, I came a cross a webapplication qdPM9.1 in one of the walkthrough exercises where I had to create a wordlist with cewl and launch a dictionary attack against the webapplication. My attack was succesful with Burp Suite Intruder, but this was not succesful with Hydra. It frustrated me and I started to write my own script in Python. Then I started searching if there was another machine with this webapplication so I could test all of them and write a walkthrough. The machine called Cheeseyjack is hosted on [Vulnhub](https://www.vulnhub.com/entry/cheesey-cheeseyjack,578/) and can be downloaded there.
 
 
 ## Getting started
