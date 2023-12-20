@@ -596,7 +596,9 @@ Fuck to all guys who like use lamah ddos. Read SRC to have no surprise
 Bases on the Apache version it would be one of these options:
 - 0x6a - RedHat Linux 7.2 (apache-1.3.20-16)1
 - 0x6b - RedHat Linux 7.2 (apache-1.3.20-16)2
+
 Let's try the second option first.
+
 ```bash
 ┌──(emvee㉿kali)-[~/Documents/kioptrix/OpenFuck]
 └─$ ./OpenFuck 0x6b $ip -c N
