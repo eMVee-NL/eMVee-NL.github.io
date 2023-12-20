@@ -7,7 +7,7 @@ tags: [Vulnhub, OSCP, SQLi, kernel, Joomla]
 render_with_liquid: false
 ---
 
-While preparing for the OSCP exam, you have to gain more experience in hacking and building your methodogy to pass the exam. This machine is not listed on the famous TJnull OSCP list, but it is related to several machines on that list. The machine can be downloaded from [Vulnhub](https://www.vulnhub.com/entry/dc-32,312/).
+While preparing for the OSCP exam, you have to gain more experience in hacking and building your methodology to pass the exam. This machine is not listed on the famous TJnull OSCP list, but it is related to several machines on that list. The machine can be downloaded from [Vulnhub](https://www.vulnhub.com/entry/dc-32,312/).
 After downloading the virtual machine, you have to configure the machine so it is on the same network as your Kali machine.
 
 
