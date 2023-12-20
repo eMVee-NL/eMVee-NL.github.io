@@ -196,7 +196,7 @@ Papers: No Results
 
 ```
 Let's keep this exploit in mind. We should check the website as well in the browser.
-![Image](/assets/img/WriteUp/PNPT/KioptrixPasted image 20231220151112.png){: width="700" height="400" }
+![Image](/assets/img/WriteUp/PNPT/Kioptrix/Pasted image 20231220151112.png){: width="700" height="400" }
 
 There is some interesting information on this page what we should add to our notes:
 - Red Hat Linux 6.2
