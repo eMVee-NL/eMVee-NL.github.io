@@ -3,7 +3,7 @@ title: Write-up Whitedoor on HackMyVM
 author: eMVee
 date: 2023-12-21 12:00:00 +0800
 categories: [CTF, HackMyVM]
-tags: [HackMyVM, sudo]
+tags: [HackMyVM,command injection, sudo]
 render_with_liquid: false
 ---
 
