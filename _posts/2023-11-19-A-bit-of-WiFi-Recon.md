@@ -2,8 +2,8 @@
 title: A bit of WiFi recon
 author: eMVee
 date: 2023-11-19 20:00:00 +0800
-categories: [CTF, WiFiChallengeLABs]
-tags: [WiFi, OSWP, WiFiChallengeLABs]
+categories: [CTF, WiFiChallengeLAB]
+tags: [WiFi, OSWP, WiFiChallengeLAB]
 render_with_liquid: false
 ---
 

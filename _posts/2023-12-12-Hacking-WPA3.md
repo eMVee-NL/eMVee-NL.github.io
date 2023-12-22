@@ -2,8 +2,8 @@
 title: Hacking WPA3 WiFi networks
 author: eMVee
 date: 2023-12-12 20:00:00 +0800
-categories: [CTF, WiFiChallengeLABs]
-tags: [WPA3, OSWP, WiFiChallengeLABs, WiFi]
+categories: [CTF, WiFiChallengeLAB]
+tags: [WPA3, OSWP, WiFiChallengeLAB, WiFi]
 render_with_liquid: false
 ---
 

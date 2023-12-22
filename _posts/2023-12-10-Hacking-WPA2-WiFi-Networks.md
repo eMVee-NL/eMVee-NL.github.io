@@ -2,8 +2,8 @@
 title: Hacking WPA2 WiFi Networks
 author: eMVee
 date: 2023-12-10 20:00:00 +0800
-categories: [CTF, WiFiChallengeLABs]
-tags: [WPA2, OSWP, WiFiChallengeLABs, WiFi]
+categories: [CTF, WiFiChallengeLAB]
+tags: [WPA2, OSWP, WiFiChallengeLAB, WiFi]
 render_with_liquid: false
 ---
 

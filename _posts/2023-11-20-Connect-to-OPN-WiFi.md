@@ -2,8 +2,8 @@
 title: Connect to OPEN WiFi network
 author: eMVee
 date: 2023-11-20 20:00:00 +0800
-categories: [CTF, WiFiChallengeLABs]
-tags: [WiFi, OSWP, WiFiChallengeLABs, OPN]
+categories: [CTF, WiFiChallengeLAB]
+tags: [WiFi, OSWP, WiFiChallengeLAB, OPN]
 render_with_liquid: false
 ---
 

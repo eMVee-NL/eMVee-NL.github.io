@@ -2,8 +2,8 @@
 title: Gain access to a WPA2 Enterprise network
 author: eMVee
 date: 2023-12-11 20:00:00 +0800
-categories: [CTF, WiFiChallengeLABs]
-tags: [WPA2 enterprise, OSWP, WiFiChallengeLABs, WiFi]
+categories: [CTF, WiFiChallengeLAB]
+tags: [WPA2 enterprise, OSWP, WiFiChallengeLAB, WiFi]
 render_with_liquid: false
 ---
 
