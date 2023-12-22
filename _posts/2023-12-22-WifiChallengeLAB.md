@@ -10,7 +10,7 @@ A while ago I was able to follow Offsec's PEN 210 (WiFi) and successfully take t
 ## WiFiChallengeLAB
 ![Image](/assets/img/WriteUp/WiFiChallengeLAB/B-WifiChallengeLab-LOGOWHITE.png){: .dark .right : w="300"}
 ![Image](/assets/img/WriteUp/WiFiChallengeLAB/B-WifiChallengeLab-LOGO.svg){: .light .right : w="300"}
-The answer? [WiFiChallengeLAB](https://wifichallengelab.com/). WiFiChallengeLAB is a virtualized WiFi pentesting laboratory without the need for physical WiFi cards. Setting up your own WiFi network environment for hacking is no longer necessary. Everything is arranged virtually on the WiFiChallengeLAB virtual machine(s). From an open and WEP WiFi network to WPA2, WPA and WPA2 enterprise WiFi networks. A true gold mine to practice WiFi hacking! That said, you do need to run a virtual machine on your local machine. 
+The answer? [WiFiChallengeLAB](https://wifichallengelab.com/). WiFiChallengeLAB is a virtualized WiFi pentesting laboratory without the need for physical WiFi cards. Setting up your own WiFi network environment for hacking is no longer necessary. Everything is arranged virtually on the WiFiChallengeLAB virtual machine(s). From an open and WEP WiFi network to WPA2, WPA3 and WPA2 enterprise WiFi networks. A true gold mine to practice WiFi hacking! That said, you do need to run a virtual machine on your local machine. 
 
 ### Download the Virtual Machine
 There are two versions available on WiFiChallengeslabs. There are some minor differents in the environments, but for the main attacks you could use either one of them to practice.
