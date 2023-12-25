@@ -235,9 +235,7 @@ We should always check the code of an exploit before we execute it.
 
 #!/bin/bash
 
-if [[ $1 == '' ){: width="700" height="400" }
-; [[ $2 == '' ){: width="700" height="400" }
-; then
+if [[ $1 == '' ]]; [[ $2 == '' ]]; then
 echo Set [TAGET-LIST.TXT] [PATH] [COMMAND]
 echo ./PoC.sh targets.txt /etc/passwd
 exit
