@@ -7,7 +7,7 @@ tags: [HackMyVM, OSCP, feroxbuster, dirsearch, hydra, sudo, git]
 render_with_liquid: false
 ---
 
-VivifyTech an easy machine from [Sancelisso](https://sancelisso.github.io/) was released today on [HackMyVM](https://downloads.hackmyvm.eu/vivifytech.zip). This machine is an awesome machine for beginners to learn the basics of enumerating. Most often enumerating is key in hacking a machine. In this write up I describe my apprach on this machine.
+VivifyTech an easy machine from [Sancelisso](https://sancelisso.github.io/) was released today on [HackMyVM](https://downloads.hackmyvm.eu/vivifytech.zip). This machine is an awesome machine for beginners to learn the basics of enumerating. Most often enumerating is key in hacking a machine. In this write up I describe my approach on this machine.
 
 ## Getting started
 Before we start we have to change the working directory to the project directory of the machine. In this directory we can store any information related to the target.
@@ -440,7 +440,7 @@ ls: cannot open directory '/home/user': Permission denied
 ```
 There is a file `Tasks.txt` in the hidden directory private. We should inspect this file.
 
-```bas
+```bash
 sarah@VivifyTech:/tmp$ cat /home/sarah/.private/Tasks.txt 
 - Change the Design and architecture of the website
 - Plan for an audit, it seems like our website is vulnerable
