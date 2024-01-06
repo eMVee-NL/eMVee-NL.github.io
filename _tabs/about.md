@@ -15,3 +15,4 @@ To share my knowledge and to learn I like to design and build sometimes vulnerab
 | Elite Economists (aka Economists) | [hackmyvm.eu](https://downloads.hackmyvm.eu/economists.zip) |
 | XMAS | [hackmyvm.eu](https://downloads.hackmyvm.eu/xmas.zip) |
 | Quick | Coming soon on [hackmyvm.eu](https://hackmyvm.eu) |
+| Save Santa | Coming soon on [hackmyvm.eu](https://hackmyvm.eu) |
