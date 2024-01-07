@@ -3,7 +3,7 @@ title: Write-up Nibbles on HTB
 author: eMVee
 date: 2022-10-22 21:00:00 +0800
 categories: [CTF, HTB]
-tags: [HTB, OSCP, CVE-2015-6967]
+tags: [HTB, OSCP, PNPT, CVE-2015-6967]
 render_with_liquid: false
 ---
 

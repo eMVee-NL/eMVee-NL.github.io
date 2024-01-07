@@ -57,7 +57,10 @@ We can discover hosts on the network with netdiscover. Let's identify some hosts
  _____________________________________________________________________________
    IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
  -----------------------------------------------------------------------------
- 10.0.2.1        52:54:00:12:35:00      1      60  Unknown vendor                        10.0.2.2        52:54:00:12:35:00      1      60  Unknown vendor                        10.0.2.3        08:00:27:7b:8b:2b      1      60  PCS Systemtechnik GmbH                10.0.2.4        08:00:27:b2:da:51      1      60  PCS Systemtechnik GmbH 
+ 10.0.2.1        52:54:00:12:35:00      1      60  Unknown vendor                        
+ 10.0.2.2        52:54:00:12:35:00      1      60  Unknown vendor                        
+ 10.0.2.3        08:00:27:7b:8b:2b      1      60  PCS Systemtechnik GmbH                
+ 10.0.2.4        08:00:27:b2:da:51      1      60  PCS Systemtechnik GmbH 
 ```
 Assign the IP address to a variable so we can use commands from our cheat sheet.
 ```bash
