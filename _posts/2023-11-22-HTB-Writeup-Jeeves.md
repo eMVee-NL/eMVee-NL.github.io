@@ -180,16 +180,16 @@ So let's look at the web services.
 
 ```
 
-![Image](/assets/img/WriteUp//HTB/Jeeves/Pasted image 20231122203340.png){: width="700" height="400" }
+![Image](/assets/img/WriteUp/HTB/Jeeves/Pasted image 20231122203340.png){: width="700" height="400" }
 
 Let's just search for something and see if anything comes back.
-![Image](/assets/img/WriteUp//HTB/Jeeves/Pasted image 20231122203421.png){: width="700" height="400" }
+![Image](/assets/img/WriteUp/HTB/Jeeves/Pasted image 20231122203421.png){: width="700" height="400" }
 
 An error message. Considering the version of a Microsoft SQL server 2005, I think we are being fooled. Upon closer analysis, it appears that the error message is a screenshot.
-![Image](/assets/img/WriteUp//HTB/Jeeves/Pasted image 20231122203533.png){: width="700" height="400" }
+![Image](/assets/img/WriteUp/HTB/Jeeves/Pasted image 20231122203533.png){: width="700" height="400" }
 
 A web service would also be active on port 50000. Let's take a look at what's running here.
-![Image](/assets/img/WriteUp//HTB/Jeeves/Pasted image 20231122203558.png){: width="700" height="400" }
+![Image](/assets/img/WriteUp/HTB/Jeeves/Pasted image 20231122203558.png){: width="700" height="400" }
 
 Page 404 and Powered by Jetty. Let's do some directory enumeration on port 50000 with gobuster.
 ```bash

@@ -7,7 +7,7 @@ tags: [HackMyVM, OSCP, PNPT, xmas, wine, sudo, backdoor, bind shell]
 render_with_liquid: false
 ---
 
-During some days off between Christmas and New Year's Eve, a new idea for a vulnerable machine arose. The title of the machine 'Save Santa' was quickly invented. The machine is designed for beginners and the focus to pwn this machine should also be on enumeration. The machine can be downloaded from [www.hackmyvm.eu](https://www.hackmyvm.eu). In this write-up I describe how you could hack this machine. If you want to learn something, try hacking this machine yourself first and if you really can’t figure it out, you can read this writeup to learn from it.
+During some days off between Christmas and New Year's Eve, a new idea for a vulnerable machine arose. The title of the machine 'Save Santa' was quickly invented. The machine is designed for beginners and the focus to pwn this machine should also be on enumeration. The machine can be downloaded from [www.hackmyvm.eu](https://hackmyvm.eu). In this write-up I describe how you could hack this machine. If you want to learn something, try hacking this machine yourself first and if you really can’t figure it out, you can read this writeup to learn from it.
 
 ## Getting started
 To set up the vulnerable machine in the lab environment, we'll import it and configure its virtual network. This machine was built in Oracle VirtualBox, so it should function smoothly within the lab. We've created a separate virtual network specifically for vulnerable machines. Make sure to configure the new vulnerable machine to utilize this virtual network.

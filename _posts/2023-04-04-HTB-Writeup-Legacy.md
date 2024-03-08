@@ -215,7 +215,7 @@ Net move to our directory for the exploit.
 ```
 Next we should edit the exploit a bit in Visual Code.
 
-![Image](/assets/img/WriteUp/HTB/Legacy//Pasted image 20230404211458.png){: width="700" height="400" }
+![Image](/assets/img/WriteUp/HTB/Legacy/Pasted image 20230404211458.png){: width="700" height="400" }
 
 As soon as it is saved we should start our netcat listener in another terminal.
 ```bash

@@ -81,7 +81,7 @@ url="https://docs.sysreptor.com/assets/htb-designs.tar.gz"
 ```
 And lastly we should import the templates so the HTB Report tempaltes are available in Sysreptor.
 ```bash
-curl -s "$url" | docker compose exec --no-TTY app python3 manage.py importdemodata --type=design
+curl -s "$url" | sudo docker compose exec --no-TTY app python3 manage.py importdemodata --type=design
 ```
 
 ## Logon to SysReptor
