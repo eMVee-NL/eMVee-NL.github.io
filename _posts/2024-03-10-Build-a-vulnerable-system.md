@@ -242,26 +242,26 @@ Since I build mostly my vulnerable machine on VirtualBox I will describe how to 
 
 ![image](/assets/img/Tutorial/Build-your-vulnerable-vm/Pasted image 20240126172148.png){: width="700" height="400" }
 
-Step 1. Select the machine to export
-Step 2. Click on the menu `Machine`
-Step 3. Click on `Export to OCI`
+- Step 1. Select the machine to export
+- Step 2. Click on the menu `Machine`
+- Step 3. Click on `Export to OCI`
 
 A new window `Export Virtual Appliance` is shown. Here you should configure a few items before moving forward.
 
 ![image](/assets/img/Tutorial/Build-your-vulnerable-vm/Pasted image 20240126172940.png){: width="700" height="400" }
 
-Step 1. Select `Open Virtualization Format 1.0`
-Step 2. Set the output directory and output file name
-Step 3. Uncheck the `Write Manifest file`
-Step 4. Click on `Next`
+- Step 1. Select `Open Virtualization Format 1.0`
+- Step 2. Set the output directory and output file name
+- Step 3. Uncheck the `Write Manifest file`
+- Step 4. Click on `Next`
 
 Now you can enter some Appliance settings.
 ![image](/assets/img/Tutorial/Build-your-vulnerable-vm/Pasted image 20240126174425.png){: width="700" height="400" }
 
-Step 1. Enter the name of you product. 
-Step 2. Enter your (nick)name into the Vendor
-Step 3. Write a small description. In this field I always write something that this should not be used in any production environment. 
-Step 4. Click on the `Finish`, your machine will be exported. This might take a while.
+- Step 1. Enter the name of you product. 
+- Step 2. Enter your (nick)name into the Vendor
+- Step 3. Write a small description. In this field I always write something that this should not be used in any production environment. 
+- Step 4. Click on the `Finish`, your machine will be exported. This might take a while.
 
 As soon as the vulnerable machine is exported, you should test it in VMware and VirtualBox.
 
