@@ -112,6 +112,7 @@ There are several ways to configure your machine in such manner that privilege e
 | Vulnerable programs | Vulnerable programs |
 |  | Exploiting Super User Do (SUDO) |
 |  | Exploiting Set User ID (SUID) |
+
 As mentioned earlier in the article, I mainly write this for Linux environments and I will skip any Windows privilege escalation in this article. 
 
 To get  some inspiration for privilege escalation on a Linux Operating System from the well known website:
