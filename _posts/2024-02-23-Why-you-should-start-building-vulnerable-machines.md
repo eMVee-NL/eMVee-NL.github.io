@@ -18,8 +18,6 @@ Vulnerable machines can be educational for others as it provides them with a pra
 ### Learn from others
 In the last months I have created several easy machines for beginners, they can be downloaded from [hackmyvm.eu](https://hackmyvm.eu). While other people are learning of hacking the vulnerbale machines, the creator learns from building the vulnerable machine as well learning from others by reading writeups, blogs and watching people hack into you vulnerable machine on YouTube or on Twitch. There was a live sessions on one of my machines (xmas) on Twitch and saved on YouTube. It was really fun to see how the machine was hacked.
 
-{% include embed/youtube.html id='krqnzu6Qa4k' %}
-
 ## It will increase awareness
 Building vulnerable machines can raise awareness about the importance of security. Not only for us as security professionals, devlopers or geeks, but also within organizations. It can help foster a culture of security, where everyone understands the importance of protecting your systems and data. Those vulnerable machines can be used to demonstrate some vulnerabilties and educate poeple about the risks in the digital world.
 
