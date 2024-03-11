@@ -890,6 +890,7 @@ We have found a plaintext password for `player@player.htb`. We should add it to 
 - PlayerOftheMatch2022
 ## Privilege escalation
 Since we found some credentials for the user player, we should try to reuse the password while we switch to the user.
+
 ```bash
 www-data@soccer:~/html/tiny/uploads$ su player
 su player
