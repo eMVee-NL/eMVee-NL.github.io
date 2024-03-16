@@ -178,7 +178,7 @@ We should visit this part of the website to see what we can do on that page.
 It looks like we can try to logon or create a customer account. Let's try to create a customer account.
 ![image](/assets/img/WriteUp/HackMyVM/Quick3/Pasted image 20240124160402.png){: width="700" height="400" }
 
-When everything is set we have o register the user.
+When everything is set we have to register the user.
 ![image](/assets/img/WriteUp/HackMyVM/Quick3/Pasted image 20240124160425.png){: width="700" height="400" }
 
 It worked, now we should try to logon to the customer portal to see if we can find something that we might can exploit.
