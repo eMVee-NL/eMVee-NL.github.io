@@ -536,11 +536,11 @@ dir
 
 c:\Users\babis\Desktop>type user.txt
 type user.txt
-< HERE IS THE USER FLAG>>
+< HERE IS THE USER FLAG >
 
 c:\Users\babis\Desktop>type c:\users\administrator\desktop\root.txt
 type c:\users\administrator\desktop\root.txt
-< HERE IS THE ROOT FLAG>>
+< HERE IS THE ROOT FLAG >
 
 c:\Users\babis\Desktop>
 
