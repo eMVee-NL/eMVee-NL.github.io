@@ -19,7 +19,7 @@ To share my knowledge and learn from others, I enjoy designing and building vuln
 | Quick 3 |[hackmyvm.eu](https://downloads.hackmyvm.eu/quick3.zip) |
 | Save Santa | [hackmyvm.eu](https://downloads.hackmyvm.eu/savesanta.zip) |
 | Quick 4 | [hackmyvm.eu](https://downloads.hackmyvm.eu/quick4.zip) |
-| Quick 5 | Coming soon on [hackmyvm.eu](https://hackmyvm.eu) |
+| Quick 5 | [hackmyvm.eu](https://downloads.hackmyvm.eu/quick5.zip) |
 
 By creating and testing vulnerable machines, I can gain a deeper understanding of cybersecurity threats and potential solutions. 
 This knowledge can then be shared with the community, fostering a collaborative environment for learning and growth.
