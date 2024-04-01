@@ -1,7 +1,7 @@
 ---
 title: Write-up Funbox7 - EasyEnum on Vulnhub
 author: eMVee
-date: 2024-03-31 00:00:00 +0800
+date: 2024-03-31 00:00:00 +0000
 categories: [CTF, Vulnhub]
 tags: [Vulnhub, shell, password reuse, OSWA]
 render_with_liquid: false
