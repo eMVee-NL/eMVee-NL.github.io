@@ -3,7 +3,7 @@ title: Write-up Quick5 on HackMyVM
 author: eMVee
 date: 2024-03-27 00:00:00 +0000
 categories: [CTF, HackMyVM]
-tags: [HackMyVM, OSCP, PNPT, client-side, client, macro, offie, libreoffice, credentials browser, password]
+tags: [HackMyVM, OSCP, PNPT, client-side, client, macro, office, libreoffice, credentials browser, password]
 render_with_liquid: false
 ---
 
@@ -137,8 +137,8 @@ To apply to a job we can upload a motivation letter and a resume. The file exten
 We should open LibreOffice Writer and start writing our malicious macro. We can follow the following steps:
 1. Create a new file in LibreOffice Writer
 2. Save the file as `filename.odt`
-3. Go to `Tools` > `Macros` > `Organize Macros` > `Basic
-4. Select document`
+3. Go to `Tools` > `Macros` > `Organize Macros` > `Basic`
+4. Select `document`
 5. Click on the `New` button
 6. Give the Macro a name
 
