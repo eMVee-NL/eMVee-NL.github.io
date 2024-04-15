@@ -824,7 +824,7 @@ c:\Users\Administrator\Desktop>
 
 ```
 
-## conclusion
+## Conclusion
 
 In conclusion, Access is a great machine for anyone looking to practice and improve their penetration testing skills. It provides a realistic scenario and a variety of challenges that will test your abilities to the limit. From information gathering and scanning, to exploitation and post-exploitation, Access covers a wide range of topics and techniques that are commonly used in the field. Yes, it is dated, but there are still some techniques used today. 
 
