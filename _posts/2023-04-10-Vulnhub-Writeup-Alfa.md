@@ -336,7 +336,7 @@ Nikto did not find any interesting information what we could use for our attack 
 ![Image](/assets/img/WriteUp/Vulnhub/Alfa/Pasted image 20230410231556.png){: width="700" height="400" }
 
 
-There are no active hyperlinks on the website, even the source code is not usefull for us as attacker. Perhaps there could be find something interesting while enumerating files and directories with dirsearch.
+There are no active hyperlinks on the website, even the source code is not useful for us as attacker. Perhaps there could be find something interesting while enumerating files and directories with dirsearch.
 ```bash
 ┌──(emvee㉿kali)-[~/Documents/Vulnhub/Alfa]
 └─$ dirsearch -u http://$ip -e php,txt,html -w /usr/share/wordlists/dirb/big.txt
