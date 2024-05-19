@@ -313,6 +313,7 @@ The request was been captured by Burp Suite.
 
 ![Image](/assets/img/WriteUp/HTB/Nunchucks/Pasted image 20240519105737.png){: width="700" height="400" }
 
+Let's find out what technology is used according the famoust SSTI image.
 
 ![Image](/assets/img/WriteUp/HTB/Nunchucks/Pasted image 20240519110212.png){: width="700" height="400" }
 
