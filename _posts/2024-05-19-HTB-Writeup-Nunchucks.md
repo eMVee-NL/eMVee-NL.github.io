@@ -317,7 +317,7 @@ Let's find out what technology is used according the famoust SSTI image.
 
 ![Image](/assets/img/WriteUp/HTB/Nunchucks/Pasted image 20240519110212.png){: width="700" height="400" }
 
-Based on the payload and the flow for SST technology identification, it looks like the technology is relying on Twig or Jinja2. Till now we don't have any clue yet what the relation is with the `X-Powered-By: Express`. Let's check if the `{7 * 7}` is not executed and reflected.
+Based on the payload and the flow for SSTI technology identification, it looks like the technology is relying on Twig or Jinja2. Till now we don't have any clue yet what the relation is with the `X-Powered-By: Express`. Let's check if the `{7 * 7}` is not executed and reflected.
 
 
 ![Image](/assets/img/WriteUp/HTB/Nunchucks/Pasted image 20240519110123.png){: width="700" height="400" }
