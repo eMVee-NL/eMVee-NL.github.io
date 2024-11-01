@@ -18,7 +18,7 @@ With their ability to expose sensitive data and functionality, APIs can become p
 
 The book is logically structured, starting with theory on how web applications work and the anatomy of APIs. It then guides you through setting up your attacker machine and actually attacking APIs. This step-by-step approach makes it easy to grasp the concepts and apply them in practice.
 Is everything perfect on the book? Well recently I was setting up some labs and my attacking machine when I encountered a small problem. I was not able to execute a command to download all wordlists from an open index on a website. The command explained in the book did not work for me. While trying several other options it was still not working. And I refused to download all wordlist manually.
-Since it there are a lot of wordlists hosted on that website I did write a Python script called [Open Index File Downloader](https://github.com/eMVee-NL/OPEN-Index-File-Downloader) to download all wordlists for hacking the APIs. 
+Since there are a lot of wordlists hosted on that website I did write a Bash script called [Open Index File Downloader](https://github.com/eMVee-NL/OPEN-Index-File-Downloader) to download all wordlists for hacking the APIs. 
 
 
 #### What APIs can be hacked?
