@@ -11,44 +11,90 @@ Just a few weeks before my OSCP exam I saw [SysReptor](https://github.com/Syslif
 
 To use SysReptor we need to install it on our system. The standard installation assumes Ubuntu as the operating system. But when hacking in the Offsec environment I use Kali. That's why I describe here how you can install it on Kali.
 
-## Installing Docker on Kali Linux
-We should start with updating the package list.
-```bash
-sudo apt update
-```
-Next we should install docker.io.
-```bash
-sudo apt install -y docker.io
-```
-After installation we can enable and start the Docker service on our system.
-```bash
-sudo systemctl enable docker --now
-```
+## Install SysReptor with a bash script
+This section of the post has been updated on March 16, 2025, following my successful completion of the OSEP exam and the creation of a script to install SysReptor on the latest version of Kali (2024.4).
 
-### Installing docker-ce on Kali Linux
-We should install some more stuff on our Kali system to install SysReptor. We should add the Docker repository to the system's package sources, which is necessary for the apt-get update and apt-get install docker-ce commands that follow. This ensures that the system is aware of the Docker repository and can download and install the necessary packages from it.
-```bash
-printf '%s\n' "deb https://download.docker.com/linux/debian bullseye stable" | sudo tee /etc/apt/sources.list.d/docker-ce.list
-```
-Now we should add the Docker repository's GPG key to the system's list of trusted keys. The system can verify the integrity and authenticity of the packages downloaded from the Docker repository. This ensures that the packages are from a trusted source and have not been tampered with.
-```bash
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg
-```
-Before installing the last thing we have to update the package list again.
-```bash
-sudo apt update
-```
-After updating the package list we can install the last things.
-```bash
-sudo apt install -y docker-ce docker-ce-cli containerd.io
-```
+In the week leading up to my OSEP exam, I successfully installed SysReptor, but I also implemented some additional steps that were not covered in my previous blog post.
 
-## Install SysReptor
-We can install SysReptor automatically with the following command:
+To get started, copy the code below and paste it into a file named `install_sysreptor.sh`:
 ```bash
-curl -s https://docs.sysreptor.com/install.sh | sudo bash
+#!/bin/bash
+
+# Exit immediately if a command exits with a non-zero status
+set -e
+
+# Set up Docker's apt repository.
+
+# Update the package index
+echo "Updating package index..."
+sudo apt-get update
+
+# Install required packages including sed, curl, openssl, uuid-runtime, and coreutils
+echo "Installing required packages..."
+sudo apt-get install -y sed curl openssl uuid-runtime coreutils ca-certificates
+
+# Add Docker's official GPG key
+echo "Adding Docker's official GPG key..."
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the Docker repository to Apt sources
+echo "Adding Docker repository to Apt sources..."
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+  bookworm stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Update the package index again
+echo "Updating package index again..."
+sudo apt-get update
+
+# Install Docker
+echo "Installing Docker..."
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+# Start and enable Docker service
+echo "Starting and enabling Docker service..."
+sudo systemctl start docker
+sudo systemctl enable docker
+
+# Verify Docker installation
+echo "Verifying Docker installation..."
+sudo docker run hello-world
+
+echo "Docker installation completed successfully!"
+
+# Download the install.sh script
+echo "Downloading the install.sh script..."
+wget https://docs.sysreptor.com/install.sh
+
+# Make the script executable
+echo "Making install.sh executable..."
+chmod +x install.sh
+
+# Prompt user for confirmation to run the install script
+read -p "Do you want to run the install.sh script? (y/n): " choice
+
+if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
+    echo "Running install.sh..."
+    sudo ./install.sh
+else
+    echo "You chose not to run the install.sh script from Sysreptor."
+    echo "You can run the following commands manually if needed:"
+    echo "wget https://docs.sysreptor.com/install.sh"
+    echo "chmod +x install.sh"
+    echo "sudo ./install.sh"
+fi
 ```
-Nice and easy, but I can also imagine that you would rather do everything yourself. Then follow this [manual](https://docs.sysreptor.com/setup/installation/#manual-installation). Please note, at the end of the (automatic) installation, a username and password will be shown. Store those credentials some where safe.
+Once you've created the file, it's essential to grant it executable permissions. You can do this by running the following command:
+```bash
+chmod +x install_sysreptor.sh
+```
+With the executable rights in place, you can now execute the script with elevated privileges. This will allow the script to update your system and install the necessary software. Simply run:
+```bash
+sudo ./install_sysreptor.sh
+```
 
 ### Import all kind of templates
 There are some templates for Offsec and Hack The Box avalable what can be downloaded from sysreptor it self. The Offsec templates are **not** official, but they are looking awesome. Importing those templates are just a few commands that will make your life easier in the end.
@@ -157,3 +203,47 @@ We start by specifying a target, which will be displayed as a title in the Findi
 Is your report ready? Then you can publish it as we have done before in the OSCP sample report.
 
 A final word of advice if you are preparing for an Offsec exam and want to use SysReptor to create your report. Practice making the report before you have the exam and NOT during your exam.
+
+
+## Old manual for installation of Sysreptor on Kali
+After creating the script for installing SysReptor, I had no idea what to do with the old manually installation blog post.
+For now, I moved the old instructions to the bottom of the page.
+
+### Installing Docker on Kali Linux
+We should start with updating the package list.
+```bash
+sudo apt update
+```
+Next we should install docker.io.
+```bash
+sudo apt install -y docker.io
+```
+After installation we can enable and start the Docker service on our system.
+```bash
+sudo systemctl enable docker --now
+```
+
+##@# Installing docker-ce on Kali Linux
+We should install some more stuff on our Kali system to install SysReptor. We should add the Docker repository to the system's package sources, which is necessary for the apt-get update and apt-get install docker-ce commands that follow. This ensures that the system is aware of the Docker repository and can download and install the necessary packages from it.
+```bash
+printf '%s\n' "deb https://download.docker.com/linux/debian bullseye stable" | sudo tee /etc/apt/sources.list.d/docker-ce.list
+```
+Now we should add the Docker repository's GPG key to the system's list of trusted keys. The system can verify the integrity and authenticity of the packages downloaded from the Docker repository. This ensures that the packages are from a trusted source and have not been tampered with.
+```bash
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg
+```
+Before installing the last thing we have to update the package list again.
+```bash
+sudo apt update
+```
+After updating the package list we can install the last things.
+```bash
+sudo apt install -y docker-ce docker-ce-cli containerd.io
+```
+
+##@ Install SysReptor
+We can install SysReptor automatically with the following command:
+```bash
+curl -s https://docs.sysreptor.com/install.sh | sudo bash
+```
+Nice and easy, but I can also imagine that you would rather do everything yourself. Then follow this [manual](https://docs.sysreptor.com/setup/installation/#manual-installation). Please note, at the end of the (automatic) installation, a username and password will be shown. Store those credentials some where safe.
