@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-Hello and welcome! I’m eMVee, a dedicated technology enthusiast with a deep-rooted passion for computers and their incredible potential. My journey into the world of technology began with hands-on experiences, where I spent countless hours creating and troubleshooting computers, networks and (weB)applications.
+Hello and welcome! I’m eMVee, a dedicated technology enthusiast with a deep-rooted passion for computers and their incredible potential. My journey into the world of technology began with hands-on experiences, where I spent countless hours creating and troubleshooting computers, networks and (web)applications.
 
 After several years of working in various roles—such as system administrator and test consultant, I realized the importance of formal education in enhancing my skills. This led me to pursue a degree in computer science, which has further enriched my understanding of the field. After a few years I moved to the security field as professional. I obtained several certifications and I am still learning. I firmly believe that in this field, we are never too old to learn, and we should always strive to expand our knowledge.
 
