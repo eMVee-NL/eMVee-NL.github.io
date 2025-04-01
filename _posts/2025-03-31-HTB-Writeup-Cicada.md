@@ -588,7 +588,7 @@ Ethernet adapter Ethernet0:
                                        10.129.0.1
 
 C:\Windows\system32> type c:\users\administrator\desktop\root.txt
-<---- SNIP USER FLAG ---->
+<---- SNIP ROOT FLAG ---->
 
 C:\Windows\system32>
 
