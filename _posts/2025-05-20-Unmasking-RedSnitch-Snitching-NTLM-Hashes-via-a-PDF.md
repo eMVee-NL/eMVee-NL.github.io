@@ -21,10 +21,14 @@ RedSnitch should be used in conjunction with tools such as Responder. Responder 
 
 ### The process in action
 The red team(er) begins by configuring [RedSnitch](https://github.com/eMVee-NL/RedSnitch?tab=readme-ov-file#getting-started) on their machine, customizing the PDF with a chosen antivirus logo to enhance its credibility and make it more enticing for the target.
+
 ![RedSnitch1](/assets/img/Tutorial/RedSnitch/RedSnitch1.png){: width="700" height="400" }
+
 After the PDF has been crafted it can be delivered through various methods, including phishing emails, file shares, WebDAV, or even hosted on a web server. This flexibility allows red teams to choose the most effective delivery method for their specific target. Stealing NTLM hashes works only if you are in the same network. 
 After sucessful delivery, the red team(er) should wait on user interaction. When the target user opens the PDF that has been created with RedSnitch and interacts with its hyperlink, the NTLM hashes of that user can then be caught with Responder or any other similar tool. The moment the user interacts with the hyperlink is crucial, as it opens the door for further exploitation within the network.
+
 ![RedSnitch2](/assets/img/Tutorial/RedSnitch/RedSnitch2.png){: width="700" height="400" }
+
 With the captured NTLM hash in hand, the red team can now navigate laterally within the network, accessing sensitive information and systems that were previously out of reach.
 
 ### Conclusion
