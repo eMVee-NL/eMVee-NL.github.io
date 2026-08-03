@@ -160,7 +160,7 @@ Nmap done: 1 IP address (1 host up) scanned in 101.30 seconds
 
 ```
 
-The scan completed successfully and this time there are only two open ports discovered
+The scan completed successfully and this time there are more open ports discovered. We note the ports and services that might be interesting. In the log file we should keep the others as well to check if we are stuck.
 - Operating System: The target is running on Windows 7 Professional 7601 Service Pack 1.
 - Hostname: The target is identified as runas-PC.
 - Port 80 (HTTP): An Apache web server (Apache httpd 2.4.57 ((Win64)) is running, showing a "Index of/" page title. We have even identified PHP as language used on the target: PHP/7.2.0.
@@ -455,8 +455,8 @@ Depolanan ge?erli kimlik bilgileri:
     
 PS C:\Users\runas> 
 ```
-Even though the output language is in Turkish (due to the system locale of this CTF machine), the technical data tells us exactly what we need to know:Hedef (Target): 
-- `Domain:interactive=RUNAS-PC\Administrator`: This confirms that the stored credential belongs to the local machine (RUNAS-PC) and targets the highly privileged Administrator account.
+Even though the output language is in Turkish (due to the system locale of this CTF machine), the technical data tells us exactly what we need to know:
+- `Hedef (Target): Domain:interactive=RUNAS-PC\Administrator`: This confirms that the stored credential belongs to the local machine (`RUNAS-PC`) and targets the highly privileged `Administrator` account.
 - `Tür (Type): Etki Alanı Parolası`: This translates to Domain Password or Interactive Credential, meaning a valid password has been permanently cached in the Windows Credential Manager.
 - `Kullanıcı (User): RUNAS-PC\Administrator`: The username tied to this saved secret.
 
