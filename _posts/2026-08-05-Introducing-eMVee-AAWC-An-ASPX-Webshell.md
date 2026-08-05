@@ -1,0 +1,36 @@
+---
+title: Introducing eMVee-AAWC || ASPX Advanced Web Control, a new ASPX webshell
+author: eMVee
+date: 2026-08-05 00:00:00 +0000
+categories: [RedTeam, Tutorial ]
+tags: [RedTeam, ASPX, Webshell, eMVee-AAWC, AAWC, CTF]
+render_with_liquid: false
+---
+![eMVee-AAWC](/assets/img/WriteUp/HackMyVM/Quoted/7.png){: .right }{: w="500"}
+In the world of Capture The Flag (CTF) challenges and real world penetration testing, web shells and administrative control panels are essential tools for maintaining persistence and executing post exploitation tasks. While the community is flooded with lightweight PHP options like the famous wwwolf-php-webshell things get significantly more challenging when you hit a hardened Windows server running Internet Information Services (IIS). PHP is rarely the default choice on enterprise Windows servers; instead, you are far more likely to face an ASP.NET environment. To bridge this gap, I designed eMVee-AAWC (ASPX Advanced Web Control).
+
+Inspired by the [wwwolf-php-webshell](https://github.com/WhiteWinterWolf/wwwolf-php-webshell), eMVee-AAWC is a C# based web administration interface tailored specifically for ASP.NET environments. It provides security professionals with a lightweight, browser based control panel to interact directly with Windows targets during authorized security operations. Whether you need to bypass restrictive execution environments using a triple method file fetcher (PowerShell, Curl, and Certutil), manage complex working directories, eMVee-AAWC turns a simple ASPX upload into a kind of command and control interface. Is it perfect? Well probably not, but it will help during your pentest.
+
+In this blog post, we will break down the core functionalities of this tool, look at how it interacts with the underlying `NT AUTHORITY\NETWORK SERVICE` context, and explore how you can use it to streamline your Windows post exploitation workflow.
+
+## A closer look on how eMVee-AAWC works
+eMVee-AAWC operates by providing a structured web panel to execute tasks directly on the target host. At its core, the tool bridges the gap between basic command execution and full post exploitation management. Instead of forcing you to rely on noisy, multi stage terminal scripts or manual, on the fly memory modifications, the tool packages multiple administrative features into a single, native ASPX file.The interface automatically detects and dynamically initializes to the web application's root execution path. When a system command is typed into the console box, the underlying C# logic captures the input and routes it through a dedicated configuration using the native command line interpreter.
+
+Unlike simpler shells that throw error codes or drop connections on failed inputs, eMVee-AAWC explicitly redirects and captures both standard console output and system error logs. The combined data stream is handled securely before being printed inside a preformatted, dark theme browser terminal. This specific design layout ensures that special control characters or raw logging structures never break the display formatting of your operational console.
+
+## The process in action
+The ethical hacker or CTF player begins by configuring eMVee-AAWC on their machine, with the option to set up a secure authentication gate using a SHA-256 cryptographic hash. If the configuration variable is populated with an uppercase hash string, the script completely locks down the interface and prompts for a password. If left empty, the authentication check is bypassed automatically for immediate access during rapid lab testing.
+
+The panel handles session durability by passing masked authentication tokens continuously through hidden form payloads across successive asynchronous HTTP POST requests. This design allows operators to interact with the interface repeatedly without relying on standard cookie management.
+
+After the shell has been successfully delivered and accessed through the web browser, the operator can manage the current working directory path via persistent session tracking. With the interface open, researchers can leverage the built-in triple method network file fetcher. This internal component allows you to bring staging payloads or enumeration scripts onto the host without typing long, complex command line strings into the console box. Depending on what binaries are available on the target Windows system, the utility programmatically switches execution arguments between three distinct paths:PowerShell: Utilizes native web requests (Invoke-WebRequest) to pull remote payloads, with built-in support to explicitly enable TLS 1.2 if an HTTPS URL is targeted.Curl: Utilizes the system native tool to handle complex URL strings and bypass restrictive execution environments over HTTP or HTTPS.Certutil: Acts as a reliable, built-in system fallback using the URL cache mechanism to fetch and separate binary streams seamlessly over the network.Moving local tools from your attacking platform directly into the active web root is managed through an integrated upload form using native upload controllers. The script automatically handles raw byte streams securely during transit, writing the data directly to the target system path without interacting with external network file shares.
+
+![image](/assets/img/Tutorial/eMVee-AAWC/eMVee-AAWC.gif){: width="700" height="400" }
+
+## Tested on 'Quoted' on HackMyVM.eu
+I designed and extensively tested this tool during my compromise of the machine Quoted on HackMyVM. After exploiting a local path misconfiguration to upload our code, the eMVee-AAWC console became the primary landing zone. It allowed me to traverse directories via persistent directory tracking, upload post exploitation tools cleanly via binary POST streams, and read sensitive flags smoothly without breaking terminal output.You can read the full, end to end compromise methodology and see how the shell performs in the field in my detailed [HackMyVM Quoted Writeup](https://emvee-nl.github.io/posts/HackMyVM-Writeup-Quoted/).
+
+## Conclusion
+In summary, eMVee-AAWC serves as a valuable addition to an ethical hacker’s or CTF player's toolkit, enhancing their ability to interact with compromised Windows web servers through a clean, unified interface. While it offers unique functionalities for structured command execution, secure local file uploads, and triple method network file fetching, it is important to remember that no single tool can be deemed the ultimate solution for all penetration testing challenges. eMVee-AAWC should be viewed as a complementary resource that, when used alongside other established tools and techniques, can help security professionals effectively identify and exploit vulnerabilities within a network. As always, a well rounded approach to cybersecurity assessments is essential for achieving the best results in any engagement.
+
+The code is open source and ready for testing. Check out the project, or contribute to its feature set on [eMVee-NL/eMVee-AAWC on GitHub](https://github.com/eMVee-NL/eMVee-AAWC)
