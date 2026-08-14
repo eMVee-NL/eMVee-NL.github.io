@@ -3,7 +3,7 @@ title: From mindmaps to code || Introducing REDCOURIER
 author: eMVee
 date: 2026-08-14 00:00:00 +0000
 categories: [RedTeam, Tutorial ]
-tags: [RedTeam, file-transfer, OSCP, OSEP, eCPPT, PNPT, REDCOURIER]
+tags: [RedTeam, file transfer, OSCP, OSEP, eCPPT, PNPT, REDCOURIER]
 render_with_liquid: false
 ---
 
