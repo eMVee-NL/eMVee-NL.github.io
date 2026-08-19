@@ -639,25 +639,27 @@ The code jumps to label `fF_DN:`, which executes the following check:
 ```php
 if (ctype_alpha($iLsE8[0])) { goto llBX9; }
 ```
+
 What does this mean: The script checks the very first character of our payload. It strictly requires it to be an alphabetical character (`ctype_alpha`).
 
-The Flow: If our payload begins with a number, a space, or a special character, it jumps to `FpB_d:`, prints an angry ASCII-art robot (`╰(☉_☉)╯ Attack detected`), and terminates immediately (exit). If it begins with a letter, we proceed to `llBX9:`.
+The flow: If our payload begins with a number, a space, or a special character, it jumps to `FpB_d:`, prints an angry ASCII-art robot (`╰(☉_☉)╯ Attack detected`), and terminates immediately (exit). If it begins with a letter, we proceed to `llBX9:`.
 
 3. The second filter, the keyword blacklist
 At label `kanZG:`, the blacklist array containing our forbidden commands (nc, bash, cat, etc.) is loaded. The script loops through this list at label `qy44y:`
 
 What does this mean: The code scans our entire input string. If it detects even a partial match with a blacklisted keyword, it routes the traffic to `RBQfX:`.
 
-The Flow: The application prints "`Attack detected: [keyword] is forbidden`" and exits. If our payload contains absolutely no blacklisted words, the execution flows safely to labels `AAxMy:` and `wXb9o:`.
+The flow: The application prints "`Attack detected: [keyword] is forbidden`" and exits. If our payload contains absolutely no blacklisted words, the execution flows safely to labels `AAxMy:` and `wXb9o:`.
 
 4. The third filter, special character regex
 At label `QtfMk:`, the script enforces a regular expression check
 ```php
 if (preg_match("/[ ;*()#&]/", $iLsE8))
 ```
+
 What does this mean: This regex hunts for dangerous symbols commonly used in command injection attacks, such as spaces, semicolons (;), asterisks (*), parentheses, hashes (#), and ampersands (&).
 
-The Flow: If any of these symbols are found, the code jumps to SKvhs:, triggers another attack warning, and terminates. If none are present, we finally enter the safe execution zone at label tbO84:.
+The flow: If any of these symbols are found, the code jumps to SKvhs:, triggers another attack warning, and terminates. If none are present, we finally enter the safe execution zone at label tbO84:.
 
 5. The destination: command execution
 If our payload successfully survives all three verification boundaries, it reaches label `tbO84:`
@@ -666,7 +668,7 @@ What happens: The server finally executes our input inside a system-level comman
 ping -c 1 -W 1 [OUR_INPUT]
 ```
 
-The Result: The system output is saved in `$MvJFf`, printed directly to our screen at label `EOkWt:`, and the script completes its cycle.
+The result: The system output is saved in `$MvJFf`, printed directly to our screen at label `EOkWt:`, and the script completes its cycle.
 
 Understanding this code explains exactly why we structured our initial payload the way we did:
 - The first letter: our payload had to start with a standard alphabetical letter to satisfy the `ctype_alpha` restriction.
