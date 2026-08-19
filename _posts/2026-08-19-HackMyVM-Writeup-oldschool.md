@@ -1,7 +1,7 @@
 ---
 title: Write-up oldschool on HackMyVM
 author: eMVee
-date: 2026-08-15 00:00:00 +0800
+date: 2026-08-19 00:00:00 +0800
 categories: [CTF, HackMyVM]
 tags: [HackMyVM, OSCP, PNPT, Linux, command injection, Burp, Burp Suit, IFS, Internal Field Separator, linpeas, tftp, telnet, lesspass, nano]
 render_with_liquid: false
