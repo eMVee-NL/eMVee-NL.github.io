@@ -56,6 +56,7 @@ After my OSCP exam I tried SysReptor for reporting and I did like the ease of wr
 ## Practice makes perfect
 Practice, practice and practice again. It is so important to master the topics covered in the course and also to create your own methodology on how to attack a web application from A to B. You need to understand the vulnerabilities so you can successfully exploit them. There are 8 challenge machines in the course. Those will help you prepare for the exam. I recommend that you hack these machines in several ways. I'm almost certain that after hacking these 8 machines you are not completely sure whether you will pass the exam or not. In the table below I have written a number of vulnerable machines on different platforms in which you can practice the techniques learned.
 
+
 | PG Play | PG Practice | HTB | HackMyVM | PortSwigger | Other |
 |----------------|--------------------|-----|----------|----------|----------|
 |FunboxEasyEnum  | megavolt           | Headless | Preload | XSS | OWASP Juice Shop |
@@ -63,15 +64,16 @@ Practice, practice and practice again. It is so important to master the topics c
 | Potato | Wheels | Red Panda | Quick3 | CORS | OWASP Mutillidae II| 
 | Loly | Hawat | Vault | Quick4 | SQL injection | bWAPP |
 | Sumo | Slort | Precious | System | SSRF | Gin & Juice Shop |
-| Funbox | Snookums | PC | Luz | Path traversal |
-| Shakabra | Dibble | Validation | Literal | OS command injection| 
-| SoSimple | Rookie Mistake | Forge | wmessage | XXE Injection |
+| Funbox | Snookums | PC | Luz | Path traversal | |
+| Shakabra | Dibble | Validation | Literal | OS command injection| |
+| SoSimple | Rookie Mistake | Forge | wmessage | XXE Injection | |
 | Election1 | | Sau | Locker |SSTI | |
-| Noname | | Topology | insomnia | |
-| DC9 | | GoodGames | Medusa| |
-| | | Numbchucks | Ephemeral| |
-| | | SecNotes | Boxing | |
-| | | TwoMillion | | |
+| Noname | | Topology | insomnia | | |
+| DC9 | | GoodGames | Medusa| | |
+| | | Numbchucks | Ephemeral| | |
+| | | SecNotes | Boxing | | |
+| | | TwoMillion | Twelve | | |
+
 
 ## Exam time!
 Book your exam in advance so that you can choose a time that suits you. I scheduled the exam at the start of the course and the exam was planned 5 weeks later. This was the best option for me so that I had a 'decent' time for the exam. 
