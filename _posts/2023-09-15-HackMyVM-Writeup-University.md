@@ -3,7 +3,7 @@ title: Write-up University on HackMyVM
 author: eMVee
 date: 2023-09-15 20:00:00 +0800
 categories: [CTF, HackMyVM]
-tags: [HackMyVM, CVE-2021-43857, Unresstricted file upload, Plain text password]
+tags: [HackMyVM, CVE-2021-43857, Unrestricted file upload, Plain text password]
 render_with_liquid: false
 ---
 
