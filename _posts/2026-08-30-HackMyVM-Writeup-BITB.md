@@ -762,7 +762,7 @@ bitb
 | [ Tip of the day: Don't click things when bored. ]           |
 +--------------------------------------------------------------+
 
-Flag: HMV{I-used-a-bitb-attack-to-get-credentials}
+Flag: HMV{HERE IS THE USER FLAG}
 
 
 ██████╗ ██╗████████╗██████╗ 
@@ -799,7 +799,7 @@ Flag: HMV{I-used-a-bitb-attack-to-get-credentials}
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣿⣿⡄⠈⠻⣿⣿⢿⣛⣩⠤⠒⠉⠁⠀⠀⠀⠀⠀⠉⠒⢤⡀⠉⠁⠀⠀⠀⠀⠀⢀⡿⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣤⣤⠴⠟⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠤⠀⠀⠀⠀⠀⢩⠇⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-Root Flag: HMV{You_h4c3d_BITB!_congratsz}
+Root Flag: HMV{HERE IS THE ROOT FLAG}
 ```
 The system prints out some awesome final ASCII frame demonstrating a classic nested Browser-in-the-Browser phishing window and a hacker.
 
