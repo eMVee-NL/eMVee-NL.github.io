@@ -73,7 +73,7 @@ Practice, practice and practice again. It is so important to master the topics c
 | | | Numbchucks | Ephemeral| | |
 | | | SecNotes | Boxing | | |
 | | | TwoMillion | Twelve | | |
-
+| | | | SIESTE | | |
 
 ## Exam time!
 Book your exam in advance so that you can choose a time that suits you. I scheduled the exam at the start of the course and the exam was planned 5 weeks later. This was the best option for me so that I had a 'decent' time for the exam. 
