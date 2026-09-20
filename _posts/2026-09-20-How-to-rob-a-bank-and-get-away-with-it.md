@@ -472,7 +472,7 @@ With our fuzzing position locked in, we click the "Add..." button inside the Pay
 
 ![image](/assets/img/WriteUp/Vulnbank/16.png){: width="700" height="400" }
 
-However, before we can feed a list of combinations into the fuzzer, we first need to generate our target wordlist. Since we want to ensure we cover every single possibility, we turn to **crunch**a powerful command-line utility designed to create custom wordlists based on specific patterns. The newes API is using a 4-digit pi, creating a 4-digit wordlist covering all numeric values from `0` to `9` guarantees we map out a total of 10000 combinations, making our attack entirely foolproof against any length variations. 
+However, before we can feed a list of combinations into the fuzzer, we first need to generate our target wordlist. Since we want to ensure we cover every single possibility, we turn to **crunch**a powerful command-line utility designed to create custom wordlists based on specific patterns. The newes API is using a 4-digit pin, creating a 4-digit wordlist covering all numeric values from `0` to `9` guarantees we map out a total of 10000 combinations, making our attack entirely foolproof against any length variations. 
 
 To build this custom password list, we drop back into our Kali terminal and execute the following crunch command.
 ```bash
