@@ -7,7 +7,7 @@ tags: [HackMyVM, OSCP, PNPT, Linux, OSEP, BitB, BITB, Phishing, swaks, PUT, elf]
 render_with_liquid: false
 ---
 
-Welcome to my writeup for BITB, a custom built (Linux) machine available for download on [HackMyVM](https://hackmywm.eu).
+Welcome to my writeup for BITB, a custom built (Linux) machine available for download on [HackMyVM](https://hackmyvm.eu).
 The concept for this machine was born after I developed a demonstration tool named RED-BITB, designed to showcase the mechanics of a Browser-in-the-Browser (BitB) attack. Unlike static CTF challenges, this machine features heavy user interaction, requiring the attacker to understand how simulated victims interact with malicious components in real time.
 
 - Machine link: [HackMyVM - BITB](https://downloads.hackmyvm.eu/bitb.zip)
