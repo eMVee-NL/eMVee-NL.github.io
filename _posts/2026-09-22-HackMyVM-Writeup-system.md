@@ -3,7 +3,7 @@ title: Write-up System on HackMyVM
 author: eMVee
 date: 2026-09-22 00:05:00 +0800
 categories: [CTF, HackMyVM]
-tags: [HackMyVM, OSCP, PNPT, OSWA, Linux, XXE, XML, LFI, viminfo, Python Library Hijacking, library hijacking]
+tags: [HackMyVM, OSCP, PNPT, OSWA, Linux, XXE, XML, LFI, viminfo, library-hijacking]
 render_with_liquid: false
 ---
 
