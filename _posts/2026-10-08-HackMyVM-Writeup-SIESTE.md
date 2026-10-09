@@ -7,13 +7,13 @@ tags: [HackMyVM, OSWA, OSCP, PNPT, Linux, SSRF, SSRF-enum, LFI, SSRF2gopher, gop
 render_with_liquid: false
 ---
 
-Welcome back, fellow hackers! Today, we are diving into the writeup for my latest custom Linux machine available on HackMyVM: SIESTE.
+Welcome back, fellow hackers! Today, we are diving into the writeup for my latest custom Linux machine available on HackMyVM: Sieste.
 
-While the name might suggest a relaxing afternoon nap, I promise you this machine will keep you wide awake. Following the heavy user-interaction style of my previous machine, BITB, SIESTE shifts the spotlight directly onto core web application flaws. Specifically, it challenges you to chain together two devastating vulnerabilities: Server Side Request Forgery (SSRF) and Command Injection.
+While the name might suggest a relaxing afternoon nap, I promise you this machine will keep you wide awake. Following the heavy user-interaction style of my previous machine, BITB, Sieste shifts the spotlight directly onto core web application flaws. Specifically, it challenges you to chain together two devastating vulnerabilities: Server Side Request Forgery (SSRF) and Command Injection.
 
 If you managed to wake this machine up and grab the root flag, awesome job! If you found yourself trapped in an endless loop, let’s break down exactly how this box was built to be broken.
 
-- Machine link: [HackMyVM - SIESTE](https://downloads.hackmyvm.eu/SIESTE.zip)
+- Machine link: [HackMyVM - SIESTE](https://downloads.hackmyvm.eu/sieste.zip)
 - Difficulty: Medium/Advanced
 - Core concepts: SSRF, file enumeration, code analyse, gopher, password reuse, command injection, sudo.
 
