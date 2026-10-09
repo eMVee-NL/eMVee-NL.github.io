@@ -469,7 +469,7 @@ Knowing that a critical unauthenticated RCE existed for GiveWP version 4.16.5.1,
 
 To safely study and verify the exploit mechanics against this specific vulnerability, we can take a closer look at this public research repository: [https://github.com/dinosn/givewp-cve-2026-82222-rce-lab](https://github.com/dinosn/givewp-cve-2026-82222-rce-lab).
 
-# Initial access
+## Initial access
 I cloned the repository to my local attacking machine and listed the directory contents to inspect the components.
 ```bash
 ┌──(emvee㉿kali)-[~/Documents/Grenade]
@@ -981,7 +981,7 @@ CVE: CVE-2026-53361 | Name: BadGarbage AF_UNIX garbage-collector race | Match da
 
 ```
 
-# Privilege escaltion
+## Privilege escaltion
 The most striking finding here is CVE-2026-31431, also known as "Copy Fail". This is a high severity local privilege escalation (LPE) vulnerability residing within the Linux kernel's cryptographic subsystem. 
 
 The issue involves how the kernel handles encryption operations in conjunction with the `splice()` system call. When processing certain algorithms through the user-space crypto API (`AF_ALG`), an unprivileged user can manipulate file descriptors to force an out-of-place memory operation.
@@ -1054,7 +1054,7 @@ HMV{HERE IS THE ROOT FLAG}
 The "Copy Fail" script executed smoothly, successfully triggering the out of place memory corruption primitive against the system's active page cache. The exploit broke completely out of our unprivileged environment and granted us an unrestricted root terminal session (`uid=0(root)`), allowing us to read the final flag file at `/root/root.txt` and fully compromise the Grenade Lab 
 box!
 
-# Final thoughts & remediation
+## Final thoughts & remediation
 The Grenade machine provides a phenomenal real world simulation of a modern cyber attack. Rather than relying on a single catastrophic flaw, capturing the root flag required systematically chaining multiple minor and major weaknesses together:
 - Our initial entry point was a single outdated WordPress plugin (GiveWP). Content Management Systems (CMS) are only as secure as their weakest component, and unauthenticated RCE flaws like CVE-2026-82222 highlight why aggressive plugin patching is a necessity.
 - Storing sensitive system credentials in a globally readable backup directory, even when masked with Base92 encoding (`creds.b92`, presents a massive post-exploitation risk. Once a low privileged shell is established, local file enumeration will inevitably expose these types of administrative assets.
