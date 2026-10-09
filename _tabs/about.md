@@ -12,7 +12,8 @@ One of my favorite ways to learn is by designing and building vulnerable machine
 
 | Machine name | Download | Published |
 | :--- | :--- | :--- |
-| SIESTE | [hackmyvm.eu](https://downloads.hackmyvm.eu/sieste.zip) | Coming soon |
+| Judiciary | [hackmyvm.eu](https://downloads.hackmyvm.eu/judiciary.zip) | Coming soon |
+| SIESTE | [hackmyvm.eu](https://downloads.hackmyvm.eu/sieste.zip) | 2026|
 | BITB | [hackmyvm.eu](https://downloads.hackmyvm.eu/bitb.zip) | 2026 |
 | Quick 5 | [hackmyvm.eu](https://downloads.hackmyvm.eu/quick5.zip) | 2024 |
 | Quick 4 | [hackmyvm.eu](https://downloads.hackmyvm.eu/quick4.zip) | 2024 |
