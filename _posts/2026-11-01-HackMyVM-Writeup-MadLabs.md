@@ -9,9 +9,9 @@ render_with_liquid: false
 
 MadLabs is a halloween themed, multi-tiered Linux machine. The exploitation path follows a strict logical flow, forcing the attacker to transition through multiple user contexts (`www-data` → `igor` → `frankenstein` → `root`) by identifying and exploiting distinct security misconfigurations, including client-side control bypasses, environment path hijacking, insecure IPC socket design, and weak credential storage.
 
-**Machine:** [MadLabs](https://downloads.hackmyvm.eu/madlabs.zip)
-**Difficulty:** Easy
-**Core concepts:** Client-Side Upload Bypass, Environment PATH Hijacking, Asynchronous Command Injection, SSH Passphrase Cracking
+- **Machine:** [MadLabs](https://downloads.hackmyvm.eu/madlabs.zip)
+- **Difficulty:** Easy
+- **Core concepts:** Client-Side Upload Bypass, Environment PATH Hijacking, Asynchronous Command Injection, SSH Passphrase Cracking
 
 
 ## Getting started
