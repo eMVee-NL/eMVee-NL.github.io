@@ -366,7 +366,7 @@ The file transfer completed successfully without encountering any protective sto
 
 To verify if the Microsoft IIS engine would parse and execute our uploaded file, I navigated directly to the corresponding HTTP path using a web browser.
 
-The browser rendered the interactable web application interface flawlessly under the heading **"eMVee - ASPX Advanced Web Cocontrol"**.
+The browser rendered the interactable web application interface flawlessly under the heading **"eMVee - ASPX Advanced Web Control"**.
 
 To test our administrative execution boundaries, I issued a standard native Windows environment command (`whoami`) through the command execution input prompt. The web server immediately evaluated the request and returned the current active process identity inside the output window.
 
