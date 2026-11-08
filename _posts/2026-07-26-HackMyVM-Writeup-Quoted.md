@@ -3,7 +3,7 @@ title: Write-up Quoted on HackMyVM
 author: eMVee
 date: 2026-07-27 00:00:00 +0800
 categories: [CTF, HackMyVM]
-tags: [HackMyVM, OSCP, PNPT, Windows, Quoted, SeImpersonatePrivilege, MetaSploit, JuicyPotato, Potato, ASPX, FTP, eMVee-AAWC]
+tags: [HackMyVM, OSCP, PNPT, Windows, Quoted, SeImpersonatePrivilege, MetaSploit, JuicyPotato, Potato, ASPX, AAWC, FTP, eMVee-AAWC]
 render_with_liquid: false
 ---
 

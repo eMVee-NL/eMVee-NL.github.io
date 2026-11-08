@@ -3,7 +3,7 @@ title: Write-up Simple on HackMyVM
 author: eMVee
 date: 2026-11-08 00:00:00 +0800
 categories: [CTF, HackMyVM]
-tags: [HackMyVM, Windows, OSCP, SMB, NetExec, NXC, Password Expired, Log Analysis, Credential Leak, ASPX, AAWC, GodPotato, Potato, SeImpersonatePrivilege]
+tags: [HackMyVM, Windows, OSCP, SMB, NetExec, NXC, Password Expired, Log Analysis, Credential Leak, ASPX, AAWC, eMVee-AAWC, GodPotato, Potato, SeImpersonatePrivilege]
 render_with_liquid: false
 ---
 
