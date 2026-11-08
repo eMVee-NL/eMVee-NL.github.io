@@ -328,7 +328,9 @@ index 0000000..b3922a7
 +if __name__ == '__main__':
 
 ```
-Reading through `app.py`, two massive security vulnerabilities immediately stood out: **Hardcoded Credentials** and an unsafe **Server-Side Template Injection (SSTI)** implementation.
+Reading through `app.py`, two massive security vulnerabilities immediately stood out:
+- **Hardcoded Credentials**
+- unsafe **Server-Side Template Injection (SSTI)** implementation.
 
 **Harcoded Credentials**
 
