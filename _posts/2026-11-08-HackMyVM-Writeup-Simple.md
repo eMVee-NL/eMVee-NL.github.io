@@ -370,7 +370,7 @@ The browser rendered the interactable web application interface flawlessly under
 
 To test our administrative execution boundaries, I issued a standard native Windows environment command (`whoami`) through the command execution input prompt. The web server immediately evaluated the request and returned the current active process identity inside the output window.
 
-![image](/assets/img/WriteUp/HackMyVM/Simple/Pasted image 20261107230551.png){: width="700" height="400" }
+![image](/assets/img/WriteUp/HackMyVM/Simple/Pasted-image-20261107230551.png){: width="700" height="400" }
 
 When executing `whoami` via our newly uploaded ASPX webshell, the underlying application pool returned the operational name: **`iis apppool\defaultapppool`**.
 
